@@ -84,9 +84,12 @@ const arrowFun1= num => console.log(num*num*num);
 
 // Rule 3: if arrow function contains single return stmt then remove return keyword,
 //body will automatically return the result
-const arrowFun2= num => (num*num*num)
+const arrowFun2= num => num*num*num
 
 console.log("cube is:"+arrowFun2(4));
 
+const cubeFun=num=>num*num*num    // inline functions
 
-// forEach, find, filter, map, reduce
+
+let result=cubeFun(6);
+console.log(result);

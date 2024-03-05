@@ -62,5 +62,8 @@ var arrowFun = function (num) { return console.log(num * num * num); };
 var arrowFun1 = function (num) { return console.log(num * num * num); };
 // Rule 3: if arrow function contains single return stmt then remove return keyword,
 //body will automatically return the result
-var arrowFun2 = function (num) { return (num * num * num); };
+var arrowFun2 = function (num) { return num * num * num; };
 console.log("cube is:" + arrowFun2(4));
+var cubeFun = function (num) { return num * num * num; }; // inline functions
+var result = cubeFun(6);
+console.log(result);
