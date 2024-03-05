@@ -3,6 +3,6 @@ document : DOM
 
 Spread Operators / Rest operators  ...v
 
-annonymous function, arrow functions
+
 
 forEach, find, filter, map, reduce
