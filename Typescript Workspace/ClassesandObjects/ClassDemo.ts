@@ -61,7 +61,12 @@ console.log("after deposit in account2: "+account2.accountBalance);
 
 // call withdraw and display balance for both accounts
 
-
+let withdrawAmount1=34000;
+if(withdrawAmount1>=account1.accountBalance)
+    account1.withdrawMoney(withdrawAmount1);
+else
+    console.log("Insufficient funds");
+    
 
 
 //account2=new BankAccount(); // const reference can not be used to refer another object
