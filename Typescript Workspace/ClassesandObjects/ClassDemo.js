@@ -43,4 +43,7 @@ display();
 console.log("Customer of account1 is " + account1.customerName); // concatenation
 // javascript expressions
 console.log("Customer of account1 is ".concat(account1.customerName, " and customer id ").concat(account1.customerId));
+console.log("after deposit in account1: " + account1.depositMoney(45000));
+account2.depositMoney(23000);
+console.log("after deposit in account2: " + account2.accountBalance);
 //account2=new BankAccount(); // const reference can not be used to refer another object
