@@ -1,0 +1,3 @@
+Implement Student class with some instance variables, parameter constructor and instance methods
+
+create few objects of student and call methods
