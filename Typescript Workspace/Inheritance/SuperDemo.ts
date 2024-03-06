@@ -28,8 +28,6 @@ class NeoTrainer extends NeoEmployee{
     } 
 }
 
-
-
 console.log("------EMPLOYEE---------------");
 let neoemployee=new NeoEmployee("Kumar","DN",89000,999);
 /** Property 'experience' is protected and only accessible within class 'NeoEmployee' and its subclasses */
