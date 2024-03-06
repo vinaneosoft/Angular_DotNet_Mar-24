@@ -22,9 +22,9 @@ animal=new Animal();
 animal.eat();
 // upcasting
 animal=<Animal>new Tiger();
-animal.eat();
-animal=new Sheep();
-animal.eat();
+animal.eat(); // tiger eat
+animal=new Sheep();  // <Animal> cast is implicit. no need to mention
+animal.eat(); // sheep eat
 
 let tiger=new Tiger();
 let sheep=new Sheep();
