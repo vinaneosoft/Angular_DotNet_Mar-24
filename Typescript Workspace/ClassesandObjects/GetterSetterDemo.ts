@@ -4,11 +4,7 @@ class BankAccount{
       private accountType="savings",
       private accountBalance=0,
       private customerId=0, 
-      private accountNumber=0)
-      {
-          // logic
-      }   
-
+      private accountNumber=0){}   
       get accNumber(){
         return this.accountNumber
       }
