@@ -1,9 +1,10 @@
 class NeoEmployee{
-    employeeId:number;
-    employeeName:string;
-    deptId:string;
-    basicSalary:number;
     protected experience:number;
+    constructor(public employeeName="not set",
+    public deptId="not assigned", 
+    public basicSalary=0, 
+    public employeeId=0){
+    }
     getGrossSalary():number{
         // ta : 5%, da: 10% hra 12 %
         console.log("in NeoEmployee method");     
@@ -11,9 +12,10 @@ class NeoEmployee{
     }
 }
 class NeoTrainer extends NeoEmployee{
-    trainingTechnologies:string[];
-    payPerHour:number;
-    extraWorkingHrs:number;
+    constructor(ename='not set', did='not assigned', bs=0, eid=0,  public trainingTechnologies:string[]=[],public payPerHour=0,public extraWorkingHrs=0){
+        /** Constructors for derived classes must contain a 'super' call */
+        super(ename,did,bs,eid); // p con
+    }
     // assume trainer getting extrapay for extra hrs of training per month
      extraPay(){
         return this.extraWorkingHrs*this.payPerHour;
@@ -26,6 +28,8 @@ class NeoTrainer extends NeoEmployee{
     } 
 }
 
+
+
 console.log("------EMPLOYEE---------------");
 let neoemployee=new NeoEmployee();
 neoemployee.employeeId=999;
@@ -36,16 +40,14 @@ neoemployee.basicSalary=89000;
 //neoemployee.experience=10;
 console.log(neoemployee.getGrossSalary());
 
-console.log("------TRAINER---------------");
-let trainer=new NeoTrainer();
-trainer.employeeId=888;
-trainer.employeeName="Mayura";
-trainer.basicSalary=89000;
-trainer.deptId="LD";
-trainer.trainingTechnologies=['JAVA','HTML','Javascript','Bootstrap'];
-trainer.payPerHour=1000;
-trainer.extraWorkingHrs=15;
+console.log("------TRAINER 1---------------");
+let techArray=['JAVA','HTML','Javascript','Bootstrap'];
+let trainer=new NeoTrainer("Mayura","DN", 56000, 111, techArray,1000,15); // call goes to super class constructor, then subclass constr
+console.log(trainer);
 console.log(trainer.getGrossSalary()); // polymorphism  // NeoTrainer
 
-
-
+console.log("------TRAINER 2---------------");
+let techArray2=['Python','DotNet','MongoDB','NODE'];
+let trainer2=new NeoTrainer("Roma","DN", 57000, 121,techArray2,1200,30); // call goes to super class constructor, then subclass constr
+console.log(trainer2);
+console.log(trainer2.getGrossSalary());
