@@ -34,14 +34,11 @@ class BankAccount{
         customer name: ${this.customerName}`);
     }
   }
-
 let account1=new BankAccount("Kuldeep","savings",56000, 888, 90909090); // p c
 console.log("account1", account1);
-
 //Property 'accountNumber' is private and only accessible within class 'BankAccount'
 //console.log(account1.accountNumber);
 //Property 'customerName' is private and only accessible within class 'BankAccount'.
 //account1.customerName="Pradeep";
-
 console.log(account1.accNumber); // getter
 account1.custName="Pradeep";  // setter
