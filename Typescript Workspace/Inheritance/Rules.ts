@@ -10,7 +10,6 @@ class LDDepartment extends Department{
     getEmployee():NeoTrainer{
         return new NeoTrainer();// def initial value
     }
-
    getBudget():number{
         return 0;
     }
