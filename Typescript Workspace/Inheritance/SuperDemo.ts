@@ -31,11 +31,7 @@ class NeoTrainer extends NeoEmployee{
 
 
 console.log("------EMPLOYEE---------------");
-let neoemployee=new NeoEmployee();
-neoemployee.employeeId=999;
-neoemployee.deptId="DN";
-neoemployee.employeeName="Kumar";
-neoemployee.basicSalary=89000;
+let neoemployee=new NeoEmployee("Kumar","DN",89000,999);
 /** Property 'experience' is protected and only accessible within class 'NeoEmployee' and its subclasses */
 //neoemployee.experience=10;
 console.log(neoemployee.getGrossSalary());
