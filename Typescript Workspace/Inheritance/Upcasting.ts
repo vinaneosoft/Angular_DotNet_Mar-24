@@ -17,10 +17,6 @@ class Sheep extends Animal{
     sleep(){
     }
 }
-
-
-
-
 let animal:Animal;
 animal=new Animal();
 animal.eat();
