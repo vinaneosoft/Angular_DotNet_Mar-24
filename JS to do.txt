@@ -6,3 +6,8 @@ Spread Operators / Rest operators  ...v
 
 
 forEach, find, filter, map, reduce
+
+Implement array API : push, pop, shift, unshift, join, splice, sort, reverse
+Implement string API : length, indexOf, lastIndexOf, charAt, substring, slice, toUpperCase(), toLowerCase(),replace(), startsWith(), endsWith(),
+trim()
+String objects are immutable
