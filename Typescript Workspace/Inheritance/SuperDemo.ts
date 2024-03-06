@@ -45,3 +45,4 @@ let techArray2=['Python','DotNet','MongoDB','NODE'];
 let trainer2=new NeoTrainer("Roma","DN", 57000, 121,techArray2,1200,30); // call goes to super class constructor, then subclass constr
 console.log(trainer2);
 console.log(trainer2.getGrossSalary());
+

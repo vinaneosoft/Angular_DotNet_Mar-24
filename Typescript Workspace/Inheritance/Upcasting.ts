@@ -1,38 +1,34 @@
 class Animal{
-
     eat():void{
-        console.log("All Animals eat");
-        
+        console.log("All Animals eat");        
     }
 }
-
 class Tiger extends Animal{
     tigerType:string;
     eat():void{
-        console.log("Tigers eat other Animals");
-        
+        console.log("Tigers eat other Animals");      
     }
 }
-
 class Sheep extends Animal{
     sheepType:string
     eat():void{
-        console.log("Sheeps eat grass");
-        
+        console.log("Sheeps eat grass");       
     }
     sleep(){
-
     }
 }
+
 
 
 
 let animal:Animal;
+animal=new Animal();
+animal.eat();
+// upcasting
 animal=<Animal>new Tiger();
 animal.eat();
 animal=new Sheep();
 animal.eat();
-
 
 let tiger=new Tiger();
 let sheep=new Sheep();
