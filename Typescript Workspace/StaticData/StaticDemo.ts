@@ -1,11 +1,14 @@
 class NeoEmployee{
     static companyName:string;
+    static count:number;
     constructor(public employeeName="AAA", public deptId="DN", public employeeId=0){
         console.log("in constructor");
+        NeoEmployee.count++;
     } 
     static{
         console.log("in static block");
-        this.companyName="Neosoft Technologies";
+        NeoEmployee.companyName="Neosoft Technologies";
+        this.count=0; // this means NeoEmployee
     }
     showDetails(){
         console.log(`
@@ -18,6 +21,8 @@ class NeoEmployee{
     }
 }
 
+console.log(NeoEmployee.count);
+
 
 const employee1=new NeoEmployee("Mayur");
 employee1.showDetails();
@@ -27,6 +32,8 @@ employee2.showDetails();
 
 const employee3=new NeoEmployee("Rahul");
 employee3.showDetails();
+
+console.log(NeoEmployee.count);
 
 const employee4=employee1;
 console.log(employee1==employee4);
