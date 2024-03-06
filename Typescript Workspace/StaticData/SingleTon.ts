@@ -1,10 +1,9 @@
-let company;
+let company:Company;
 class Company{
     private constructor(){
         console.log("in constr");   
     }
-
-    static getInstance(){   
+    static getInstance(): Company {   
         if(company==null){
          company=new Company();
         }
