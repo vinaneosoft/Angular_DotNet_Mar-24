@@ -9,6 +9,9 @@ class NeoEmployee{
         console.log("in NeoEmployee method");     
         return this.basicSalary+0.05*this.basicSalary+0.1*this.basicSalary+0.12*this.basicSalary;
     }
+    showDetails(){
+
+    }
 }
 
 class NeoTrainer extends NeoEmployee{
@@ -21,18 +24,13 @@ class NeoTrainer extends NeoEmployee{
     }
     // new formula for gross salary for trainer
     // bs+ta+da+hra+ep
-     getGrossSalary():number{
-        console.log("in NeoTrainer method");
-        return this.basicSalary+0.05*this.basicSalary+0.1*this.basicSalary+0.12*this.basicSalary+this.extraPay();
-    } 
-
-}
-
-class SoftSkillTrainer extends NeoTrainer{
     getGrossSalary():number{
-        return 9999;
-    }
+        console.log("in NeoTrainer method");
+        return super.getGrossSalary()+this.extraPay();
+    } 
+  
 }
+
 console.log("------EMPLOYEE---------------");
 
 let neoemployee=new NeoEmployee();
@@ -53,7 +51,7 @@ trainer.deptId="LD";
 trainer.trainingTechnologies=['JAVA','HTML','Javascript','Bootstrap'];
 trainer.payPerHour=1000;
 trainer.extraWorkingHrs=15;
-console.log(trainer.getGrossSalary()); // polymorphism 
+console.log(trainer.getGrossSalary()); // polymorphism  // NeoTrainer
 
 
 

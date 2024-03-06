@@ -21,6 +21,8 @@ var NeoEmployee = /** @class */ (function () {
         console.log("in NeoEmployee method");
         return this.basicSalary + 0.05 * this.basicSalary + 0.1 * this.basicSalary + 0.12 * this.basicSalary;
     };
+    NeoEmployee.prototype.showDetails = function () {
+    };
     return NeoEmployee;
 }());
 var NeoTrainer = /** @class */ (function (_super) {
@@ -36,20 +38,10 @@ var NeoTrainer = /** @class */ (function (_super) {
     // bs+ta+da+hra+ep
     NeoTrainer.prototype.getGrossSalary = function () {
         console.log("in NeoTrainer method");
-        return this.basicSalary + 0.05 * this.basicSalary + 0.1 * this.basicSalary + 0.12 * this.basicSalary + this.extraPay();
+        return _super.prototype.getGrossSalary.call(this) + this.extraPay();
     };
     return NeoTrainer;
 }(NeoEmployee));
-var SoftSkillTrainer = /** @class */ (function (_super) {
-    __extends(SoftSkillTrainer, _super);
-    function SoftSkillTrainer() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    SoftSkillTrainer.prototype.getGrossSalary = function () {
-        return 9999;
-    };
-    return SoftSkillTrainer;
-}(NeoTrainer));
 console.log("------EMPLOYEE---------------");
 var neoemployee = new NeoEmployee();
 neoemployee.employeeId = 999;
@@ -68,4 +60,4 @@ trainer.deptId = "LD";
 trainer.trainingTechnologies = ['JAVA', 'HTML', 'Javascript', 'Bootstrap'];
 trainer.payPerHour = 1000;
 trainer.extraWorkingHrs = 15;
-console.log(trainer.getGrossSalary()); // polymorphism 
+console.log(trainer.getGrossSalary()); // polymorphism  // NeoTrainer
