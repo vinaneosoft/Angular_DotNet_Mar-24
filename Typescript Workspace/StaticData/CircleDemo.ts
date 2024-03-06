@@ -11,6 +11,7 @@ class Circle{
 //Circle.pie=3.14; 
 let circle1=new Circle(6);
 //circle1.radius=12;
+console.log(circle1.getArea());
 let circle2=new Circle(10);
 //circle2.radius=9;
 let circle3=new Circle(14);
