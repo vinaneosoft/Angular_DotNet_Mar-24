@@ -20,9 +20,7 @@ class NeoEmployee{
        return NeoEmployee.companyName; 
     }
 }
-
 console.log(NeoEmployee.count);
-
 
 const employee1=new NeoEmployee("Mayur");
 employee1.showDetails();
@@ -41,8 +39,3 @@ console.log(employee1===employee4);
 
 console.log(NeoEmployee.companyName);
 console.log(NeoEmployee.getCompany());
-
-
-
-
-
