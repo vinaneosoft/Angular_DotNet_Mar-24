@@ -49,4 +49,14 @@ console.log("account5", account5);
 let account6=new BankAccount(); // p c
 console.log("account6", account6);
 
+let account7=new BankAccount("Kuldeep","savings",56000, 888, 90909090); 
 // ? used to  represent optional parameter for methods
+
+let accSet=new Set<BankAccount>();
+
+accSet.add(account1);
+accSet.add(account2);
+accSet.add(account7);
+console.log("-----------------------");
+
+accSet.forEach(acc=>console.log(acc));
