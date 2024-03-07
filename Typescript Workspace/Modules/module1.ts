@@ -24,4 +24,4 @@ export class BankAccount{
 }
 
 
-let bankName="Axis";
+export let bankName="Axis";
