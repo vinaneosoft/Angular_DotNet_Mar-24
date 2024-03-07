@@ -29,7 +29,7 @@ while (true) {
     console.log(entry.value);
 }
 console.log("---------------");
-let itr3 = cities.entries(); // set is not key-value pair collection
+let itr3 = cities.entries(); // set is not key-value pair collection so key==value
 while (true) {
     let entry = itr3.next();
     console.log(entry);
@@ -37,3 +37,9 @@ while (true) {
         break;
     console.log(entry.value);
 }
+let cityArray = new Array('Mumbai', 'mumbai', 'Pune', 'Thane', "Pune");
+let citySet = new Set();
+for (let ele of cityArray) {
+    citySet.add(ele.toLowerCase());
+}
+console.log(citySet);

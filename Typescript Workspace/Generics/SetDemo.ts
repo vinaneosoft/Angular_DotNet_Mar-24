@@ -40,3 +40,11 @@ while(true){
         break;
     console.log(entry.value);
 }
+
+let cityArray=new Array<string>('Mumbai','mumbai','Pune','Thane', "Pune");
+let citySet=new Set<string>();
+for(let ele of cityArray){
+ citySet.add(ele.toLowerCase())
+}
+console.log(citySet);
+
