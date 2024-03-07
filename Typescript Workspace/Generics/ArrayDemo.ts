@@ -8,6 +8,7 @@ salaryArray.push(78000);
 salaryArray.push(78000,67000);
 salaryArray.push(77000);
 salaryArray.push();
+
 console.log("Popped element:"+salaryArray.pop());
 console.log(salaryArray);
 
