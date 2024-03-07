@@ -20,7 +20,6 @@ while(true){
     if(entry.done)
         break;
     console.log(entry.value);
-   
 }
 console.log("---------------");
 let itr2=cities.keys(); // set is not key-value pair collection
@@ -30,7 +29,6 @@ while(true){
     if(entry.done)
         break;
     console.log(entry.value);
-   
 }
 console.log("---------------");
 
@@ -41,5 +39,4 @@ while(true){
     if(entry.done)
         break;
     console.log(entry.value);
-   
 }
