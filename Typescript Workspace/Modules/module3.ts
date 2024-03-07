@@ -9,7 +9,8 @@ class ABC{
 
 }
 
-export {departmentName, trainerName}
+export {departmentName, trainerName, ABC}
+
 export default companyName;
 /**A module cannot have multiple default exports */
-//export default ABC;
+
