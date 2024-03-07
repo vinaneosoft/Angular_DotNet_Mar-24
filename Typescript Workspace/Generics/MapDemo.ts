@@ -1,9 +1,9 @@
 // key-value collection
 // key : unique, value : duplicate allowed
-// non-index collection
+// non-indexed collection
 
 
-// empId :key,  DeptName : value
+// empId :key,  DeptId : value
 // number, string
 
 let empMap=new Map<number, string>();
@@ -44,4 +44,4 @@ while(true){
     console.log(entry.value); // key-value
 }
 console.log("---------------");
-empMap.forEach(ele=>console.log(ele))
+empMap.forEach((ele1,ele2)=>console.log(ele1+" "+ele2))
