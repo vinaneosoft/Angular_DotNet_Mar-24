@@ -20,5 +20,6 @@ console.log(bank);
 
 console.log(m3.departmentName);
 console.log(m3.trainerName);
+console.log(m3.default);
 
 console.log(cname);
