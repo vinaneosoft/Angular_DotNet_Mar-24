@@ -10,7 +10,9 @@ let accounts=new Array<BankAccount>(account1,account2,account3,account4,account5
 
 accounts.forEach(acc=>console.log(acc));
 
- let accSet=new Set<BankAccount>(accounts);
-accSet.forEach(acc=>console.log(acc));
+
+
+
+
 
 
