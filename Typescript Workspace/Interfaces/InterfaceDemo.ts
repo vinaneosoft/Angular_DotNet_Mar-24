@@ -2,7 +2,9 @@
 interface DeveloperIntf{
     employeeId:number;
     departmentId:string;
+    experience?:number;
     showDetails():void;
+    getExperience?():number;
 }
 class NeoDeveloper implements DeveloperIntf{
     employeeId: number;
@@ -14,8 +16,12 @@ class NeoDeveloper implements DeveloperIntf{
 class WebWerksDeveloper implements DeveloperIntf{
     employeeId:number;
     departmentId: string;
+    experience:number;
     showDetails(): void {
         console.log("WebWerksDeveloper Details");
+    }
+    getExperience(): number {
+        return this.experience;
     }
 }
 
@@ -24,7 +30,6 @@ developer=new NeoDeveloper();
 developer.employeeId=111;
 developer.departmentId="JS";
 developer.showDetails();
-
 
 developer=new WebWerksDeveloper();
 developer.employeeId=123;
