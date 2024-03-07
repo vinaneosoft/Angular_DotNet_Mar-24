@@ -24,4 +24,4 @@ export class BankAccount{
   }
 }
 
-let bankName="SC"
+export let bankName="SC"

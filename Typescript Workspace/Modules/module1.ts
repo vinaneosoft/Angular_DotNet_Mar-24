@@ -25,3 +25,7 @@ export class BankAccount{
 
 
 export let bankName="Axis";
+
+export function changeBank(bn:string){
+    bankName=bn;
+}
