@@ -18,3 +18,15 @@
         <option value="pune">PUNE</option>
     </select>
 </div>
+<div>
+    <input type="number" [(ngModel)]="customerAge" placeholder="Enter Customer Age">
+    <p>
+        <i><span>Customer Age age is :</span>{{customerAge}}</i>
+    </p>
+    <p *ngIf="customerAge>=18">
+        <b>YOUR AGE IS VALID</b>
+    </p>
+    <p *ngIf="customerAge<18">
+        <b>YOUR AGE IS IN-VALID</b>
+    </p>
+</div>

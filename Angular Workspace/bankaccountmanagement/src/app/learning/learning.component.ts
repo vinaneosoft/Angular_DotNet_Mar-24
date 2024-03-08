@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class LearningComponent {
   bankName="HDBC Bank";
   officeLocation="rabale";
-
+  customerAge=0;
   display(){
     console.log(this.bankName);
     console.log(this.officeLocation);
