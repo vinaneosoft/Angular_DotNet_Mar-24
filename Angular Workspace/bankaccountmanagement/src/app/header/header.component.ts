@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent{
       mainHeading:string;
-
       constructor(){
         this.mainHeading="AXIS BANK ACCOUNT MANAGEMENT";
       }

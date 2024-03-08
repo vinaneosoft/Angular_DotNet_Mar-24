@@ -1,2 +1,7 @@
 
 <h3>{{bankName}}</h3><!-- string interpolation {{property from ts}}-->
+
+<div>
+    <label for="bank">Enter BankName:</label>
+    <input type="text" name="bank" id="bank" [(ngModel)]="bankName" (keyup)="display()">
+</div>

@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './learning.component.css'
 })
 export class LearningComponent {
-  bankName="Axis Bank";
+  bankName="HDBC Bank";
+
+  display(){
+    console.log(this.bankName);
+  }
 }
