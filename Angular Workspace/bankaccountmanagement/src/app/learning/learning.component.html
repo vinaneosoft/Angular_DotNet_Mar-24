@@ -3,5 +3,6 @@
 
 <div>
     <label for="bank">Enter BankName:</label>
-    <input type="text" name="bank" id="bank" [(ngModel)]="bankName" (keyup)="display()">
+    <input type="text" name="bank" id="bank" [(ngModel)]="bankName" (keyup)="display()" (focus)="test()">
+    <!-- blur, mouseenter-->
 </div>

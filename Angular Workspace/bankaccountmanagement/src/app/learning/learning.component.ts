@@ -11,4 +11,8 @@ export class LearningComponent {
   display(){
     console.log(this.bankName);
   }
+  test(){
+    console.log("Element is focussed");
+    
+  }
 }
