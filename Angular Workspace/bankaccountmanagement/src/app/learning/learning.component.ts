@@ -7,8 +7,11 @@ import { Component } from '@angular/core';
 })
 export class LearningComponent {
   bankName="HDBC Bank";
-  officeLocation="rabale";
+  officeLocation="dadar";
   customerAge:number=0;
+
+ cities=['rabale','pune','dadar','parel'];
+
   display(){
     console.log(this.bankName);
     console.log(this.officeLocation);
@@ -26,5 +29,5 @@ export class LearningComponent {
       console.log(age);
   }
 
-
+  
 }

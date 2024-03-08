@@ -89,3 +89,10 @@
         </p>
     </ng-template>
 </div>
+<div>
+    <h3>FOR</h3>
+    <label for="offcities">Enter your office location:</label>
+    <select  id="offcities" [(ngModel)]="officeLocation" (change)="display()">
+       <option  *ngFor="let city of cities" [value]="city">{{city | uppercase }}</option>
+    </select>
+</div>
