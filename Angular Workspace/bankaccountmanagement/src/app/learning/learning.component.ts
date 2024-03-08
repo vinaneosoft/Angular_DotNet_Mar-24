@@ -19,7 +19,7 @@ export class LearningComponent {
     console.log(typeof node);
       console.log(node);
   }
-  inputmethod2(age:string){
+  inputmethod2(age:any){
     console.log(typeof age);
       console.log(age);
   }

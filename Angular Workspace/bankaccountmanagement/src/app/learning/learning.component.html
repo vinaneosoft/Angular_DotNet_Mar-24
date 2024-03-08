@@ -8,7 +8,5 @@
 </div>
 <div>
     <input type="number" placeholder="Enter customer age" #customerInput>
-    <button type="button" (click)="inputmethod1(customerInput)">NODE</button>
-
-    <button type="button" (click)="inputmethod2(customerInput.value)">NODE VALUE</button>
+    <button type="button" (click)="inputmethod1(customerInput); inputmethod2(customerInput.value)">CLICK</button>
 </div>
