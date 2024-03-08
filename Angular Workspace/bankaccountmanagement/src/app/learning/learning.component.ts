@@ -13,6 +13,14 @@ export class LearningComponent {
   }
   test(){
     console.log("Element is focussed");
-    
+  }
+
+  inputmethod1(node:any){
+    console.log(typeof node);
+      console.log(node);
+  }
+  inputmethod2(age:string){
+    console.log(typeof age);
+      console.log(age);
   }
 }

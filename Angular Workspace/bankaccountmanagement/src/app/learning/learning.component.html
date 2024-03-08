@@ -3,6 +3,12 @@
 
 <div>
     <label for="bank">Enter BankName:</label>
-    <input type="text" name="bank" id="bank" [(ngModel)]="bankName" (keyup)="display()" (focus)="test()">
+    <input type="text" name="bank" id="bank" [(ngModel)]="bankName" (keyup)="display()" (mouseenter)="test()">
     <!-- blur, mouseenter-->
+</div>
+<div>
+    <input type="number" placeholder="Enter customer age" #customerInput>
+    <button type="button" (click)="inputmethod1(customerInput)">NODE</button>
+
+    <button type="button" (click)="inputmethod2(customerInput.value)">NODE VALUE</button>
 </div>
