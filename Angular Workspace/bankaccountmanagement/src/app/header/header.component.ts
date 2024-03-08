@@ -5,6 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent{
+      mainHeading:string;
 
+      constructor(){
+        this.mainHeading="BANK ACCOUNT MANAGEMENT";
+      }
 }
+     
