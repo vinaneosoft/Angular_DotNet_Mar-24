@@ -48,3 +48,25 @@
         </p>
     </ng-template>
 </div>
+
+<hr>
+<div>
+    <h3>NESTED IF-ELSE</h3>
+    <input type="number" [(ngModel)]="customerAge" placeholder="Enter Customer Age">
+    <p>
+        <i><span>Customer Age age is :</span>{{customerAge}}</i>
+    </p>
+    <p *ngIf="customerAge<0 else elsepart1">
+            <b>PLEASE ENTER POSITIVE NUMBER</b>
+    </p>
+    <ng-template #elsepart1>
+        <p *ngIf="customerAge>=18 else elsepart2">
+            <b>YOUR AGE IS VALID</b>
+        </p>
+    </ng-template>
+    <ng-template #elsepart2>
+        <p>
+            <b>YOUR AGE IS IN-VALID</b>
+        </p>
+    </ng-template>
+</div>
