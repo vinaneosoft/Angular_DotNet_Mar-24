@@ -70,3 +70,22 @@
         </p>
     </ng-template>
 </div>
+<hr>
+<div>
+    <h3>IF-THEN-ELSE</h3>
+    <input type="number" [(ngModel)]="customerAge" placeholder="Enter Customer Age">
+    <p>
+        <i><span>Customer Age age is :</span>{{customerAge}}</i>
+    </p>
+    <span *ngIf="customerAge>=18 then thenblock;else elseblock"></span>
+    <ng-template #thenblock>
+        <p>
+            <b>YOUR AGE IS VALID</b>
+        </p>
+    </ng-template>
+    <ng-template #elseblock>
+        <p>
+            <b>YOUR AGE IS IN-VALID</b>
+        </p>
+    </ng-template>
+</div>
