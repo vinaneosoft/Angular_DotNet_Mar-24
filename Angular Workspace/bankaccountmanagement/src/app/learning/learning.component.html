@@ -1,6 +1,5 @@
 
 <h3>{{bankName}}</h3><!-- string interpolation {{property from ts}}-->
-
 <div>
     <label for="bank">Enter BankName:</label>
     <input type="text" name="bank" id="bank" [(ngModel)]="bankName" (keyup)="display()" (mouseenter)="test()">
@@ -9,4 +8,13 @@
 <div>
     <input type="number" placeholder="Enter customer age" #customerInput>
     <button type="button" (click)="inputmethod1(customerInput); inputmethod2(customerInput.value)">CLICK</button>
+</div>
+<div>
+    <label for="cities">Enter your office location:</label>
+    <select name="cities" id="cities" [(ngModel)]="officeLocation" (change)="display()">
+        <option value="dadar">DADAR</option>
+        <option value="rabale">RABALE</option>
+        <option value="parel">PAREL</option>
+        <option value="pune">PUNE</option>
+    </select>
 </div>

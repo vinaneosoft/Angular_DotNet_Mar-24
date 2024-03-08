@@ -7,9 +7,13 @@ import { Component } from '@angular/core';
 })
 export class LearningComponent {
   bankName="HDBC Bank";
+  officeLocation="pune";
+
 
   display(){
     console.log(this.bankName);
+    console.log(this.officeLocation);
+    
   }
   test(){
     console.log("Element is focussed");
@@ -23,4 +27,6 @@ export class LearningComponent {
     console.log(typeof age);
       console.log(age);
   }
+
+
 }
