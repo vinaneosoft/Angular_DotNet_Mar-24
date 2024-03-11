@@ -8,6 +8,8 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item"><i>Account created on </i><b>{{customerAccount.accountDate}}</b></li>
       <li class="list-group-item"><i>Current Balance: </i><b>{{customerAccount.accountBalance}}</b></li>
+      <li class="list-group-item"><i>Current Balance: </i><b>{{customerAccount.accountBalance | number}}</b></li> <!-- round to 3, -->
+      <li class="list-group-item"><i>Current Balance: </i><b>{{customerAccount.accountBalance | number : '.2-2'}}</b></li> <!-- fix 2 digits after decimal place-->
       <li class="list-group-item"><i>Customer Id: </i><b>{{customerAccount.customerId}}</b></li>
       <li class="list-group-item"><i>Customer Name : </i><b>{{customerAccount.customerName | slice:0:spaceIndex | lowercase }}</b></li>
       <li class="list-group-item"><i>Type of Account : </i><b>{{customerAccount.accountType | uppercase}}</b></li>
