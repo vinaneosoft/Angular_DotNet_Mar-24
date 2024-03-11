@@ -8,7 +8,7 @@ import { BankAccount } from '../classes/bank-account';
   styleUrl: './account-card.component.css'
 })
 export class AccountCardComponent {
-  // account details???
+   spaceIndex=0;
 
   @Input()// data in customerAccount is input from parent
   customerAccount:BankAccount=new BankAccount();
@@ -23,13 +23,17 @@ export class AccountCardComponent {
   eventEmitter2=new EventEmitter<string[]>();
 
   constructor(){
-    console.log("in constructor of Account Card Component");
-    // logic 
+  
+    // put emit logic here and test
   }
   ngOnInit(){
-    console.log("in init method of Account Card Component");
+   // console.log("in init method of Account Card Component");
     this.eventEmitter.emit(this.accountHeading); //2. // via event we are passing data to direct parent
     this.eventEmitter2.emit(this.testArray);
+
+  
+    this.spaceIndex=this.customerAccount.customerName.indexOf(" ");
+   // console.log(this.spaceIndex);
   }
 }
 /** IN CHILD ts file
