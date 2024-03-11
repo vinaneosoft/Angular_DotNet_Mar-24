@@ -11,6 +11,7 @@ export class LearningComponent {
   customerAge:number=0;
 
  cities=['rabale','pune','dadar','parel'];
+ menus =['idli', 'medu vada','dosa', 'uttapa','poha','upma'];
 
   display(){
     console.log(this.bankName);
