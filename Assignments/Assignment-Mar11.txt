@@ -1,0 +1,11 @@
+Sort number array,
+String array 
+and bank account array on the basis of acc num, customername, balance, account date, 
+
+nums.sort(comparision);
+names.sort();
+accounts.sort( num)
+accounts.sort( name)
+
+
+Implement this logic in difft ts files not in angular
