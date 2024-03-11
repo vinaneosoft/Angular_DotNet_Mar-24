@@ -7,13 +7,15 @@ import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LearningComponent } from './learning/learning.component';
 import { FormsModule } from '@angular/forms';
+import { CustomerAccountComponent } from './customer-account/customer-account.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavbarComponent,
-    LearningComponent
+    LearningComponent,
+    CustomerAccountComponent
   ],
   imports: [
     BrowserModule,

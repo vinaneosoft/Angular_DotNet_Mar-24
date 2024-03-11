@@ -1,0 +1,28 @@
+<section>
+    <h2>ACCOUNT DETAILS</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr></tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let account of bankAccounts">
+                <td>{{account.id}}</td>
+                <td>{{account.customerId}}</td>
+                <td>{{account.customerName}}</td>
+                <td>{{account.accountType}}</td>
+                <td>{{account.accountBalance}}</td>
+                <td>{{account.accountDate}}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+<!--
+
+    Angular Forms
+
+    Input form to take details of account
+-->

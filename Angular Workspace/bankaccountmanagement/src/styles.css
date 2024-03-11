@@ -2,3 +2,8 @@
 .backGroundBody{
     background-color: aqua;
 }
+
+.textStyle{
+    text-decoration: underline;
+    text-transform: uppercase;
+}
