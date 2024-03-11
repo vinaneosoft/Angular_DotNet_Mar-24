@@ -24,7 +24,7 @@
     <h3 [ngStyle]="styleObject">IF</h3>
     <input type="number" [(ngModel)]="customerAge" placeholder="Enter Customer Age">
     <p>
-        <i><span [ngClass]="styleArray">Customer Age age is :</span>{{customerAge}}</i>
+        <i><span [ngClass]="['fontStyle','borderStyle']">Customer Age age is :</span>{{customerAge}}</i>
     </p>
     <p *ngIf="customerAge>=18">
         <b>YOUR AGE IS VALID</b>
@@ -35,7 +35,7 @@
 </div>
 <hr>
 <div>
-    <h3>IF-ELSE</h3>
+    <h3 [ngClass]="styleClassObject">IF-ELSE</h3>
     <input type="number" [(ngModel)]="customerAge" placeholder="Enter Customer Age">
     <p>
         <i><span>Customer Age age is :</span>{{customerAge}}</i>

@@ -45,5 +45,11 @@ export class LearningComponent {
     border:'4px solid blue'
   }
 
-  styleArray=['fontStyle','borderStyle'];
+  /**NgClass can only toggle CSS classes expressed as strings,  */
+  styleArray=["fontStyle","borderStyle"];
+
+  styleClassObject={
+    "fontStyle": true,
+    "borderStyle":true
+  }
 }
