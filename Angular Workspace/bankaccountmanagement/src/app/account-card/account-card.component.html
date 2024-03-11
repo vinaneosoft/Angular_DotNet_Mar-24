@@ -3,14 +3,14 @@
     <img src="assets/Images/Axis-Bank-Accounts.png" class="card-img-top" alt="axis bank account"> <!---->
     <div class="card-body">
       <h5 class="card-title"><i>acc no.</i><span>{{customerAccount.id}}</span></h5>
-      <h6 class="card-title"><small>Customer Name : </small><span>{{customerAccount.customerName}}</span></h6>
+      <h6 class="card-title"><small>Customer Name : </small><span>{{customerAccount.customerName | titlecase}}</span></h6>
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item"><i>Account created on </i><b>{{customerAccount.accountDate}}</b></li>
       <li class="list-group-item"><i>Current Balance: </i><b>{{customerAccount.accountBalance}}</b></li>
       <li class="list-group-item"><i>Customer Id: </i><b>{{customerAccount.customerId}}</b></li>
-      <li class="list-group-item"><i>Customer Name : </i><b>{{customerAccount.customerName}}</b></li>
-      <li class="list-group-item"><i>Type of Account : </i><b>{{customerAccount.accountType}}</b></li>
+      <li class="list-group-item"><i>Customer Name : </i><b>{{customerAccount.customerName | lowercase }}</b></li>
+      <li class="list-group-item"><i>Type of Account : </i><b>{{customerAccount.accountType | uppercase}}</b></li>
     </ul>
     <div class="card-body">
       <a href="#" class="card-link">More Details</a>

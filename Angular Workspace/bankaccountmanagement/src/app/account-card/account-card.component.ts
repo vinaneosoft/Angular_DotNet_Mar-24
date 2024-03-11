@@ -15,7 +15,7 @@ export class AccountCardComponent {
 
   accountHeading="ACCOUNT DETAILS" // this heading to be passed to parent from child
 
-  testArray=['vina','patil'];
+  testArray=["this page is copyright by", "Vina Patil"];
   @Output()
   eventEmitter=new EventEmitter<string>(); //1.
 
