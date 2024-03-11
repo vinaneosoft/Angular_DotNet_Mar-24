@@ -18,15 +18,17 @@
 </section> -->
 
 <section>
-    <h2>{{heading}}</h2> <!-- 5.-->
+    <h2>{{heading}}</h2> <!-- 4.-->
     <div class="row">
         <div class="col-md-4" *ngFor="let account of bankAccounts ">
-            <app-account-card [customerAccount]="account"  (eventEmitter)="passData($event)"> <!-- 3. -->
+            <app-account-card [customerAccount]="account"  (eventEmitter)="heading=$event" (eventEmitter2)="array=$event"> <!-- 3. -->
             </app-account-card>
         </div>
     </div>
 </section>
-
+<section>
+    <span>{{array}}</span>
+</section>
 
 <!--
 

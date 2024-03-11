@@ -10,6 +10,7 @@ export class CustomerAccountComponent {
    bankAccounts=new Array<BankAccount>();
 
    heading="";
+   array:string[]=[]
   // we r going to manage all bank accounts here
   constructor(){
     this.createAccount();  }
@@ -21,7 +22,5 @@ export class CustomerAccountComponent {
     this.bankAccounts.push(new BankAccount(235000,"salary","Sandesh Mane",121,78787878,new Date('15 Feb 2020')));
   }
 
-  passData(data:string){
-  this.heading=data;  //4.
-  }
+
 }
