@@ -100,3 +100,28 @@
         <li *ngFor="let item of menus; let e=even; let od=odd; let ct=count">{{item}} -  {{e}} - {{od}} -{{ct}}</li>
     </ol>
 </div>
+<hr>
+<div>
+<input type="number" placeholder="enter percentage of student" [(ngModel)]="percentage">
+<div [ngSwitch]="true">
+    <p *ngSwitchCase="percentage>=70">
+        <b>Your grade is FIRST CLASS with DISTICTION</b>
+    </p>
+    <p  *ngSwitchCase="percentage<70 && percentage>=60"> 
+        <b>Your grade is FIRST CLASS</b>
+    </p>
+    <p  *ngSwitchCase="percentage<60 && percentage>=40">
+        <b>Your are PASS</b>
+    </p>
+    <p  *ngSwitchCase="percentage<40 && percentage>=0">
+        <b>Your are FAIL</b>
+    </p>
+ <!--    <p  *ngSwitchCase="percentage<60 && percentage>=40">
+        <b>HEY!!! Your are PASS</b>
+    </p> -->
+    <p  *ngSwitchDefault>
+        <b>WRONG INPUT</b>
+    </p>
+</div>
+
+</div>

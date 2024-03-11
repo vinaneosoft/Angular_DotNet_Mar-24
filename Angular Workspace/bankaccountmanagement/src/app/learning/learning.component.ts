@@ -9,6 +9,7 @@ export class LearningComponent {
   bankName="HDBC Bank";
   officeLocation="dadar";
   customerAge:number=0;
+  percentage=0;
 
  cities=['rabale','pune','dadar','parel'];
  menus =['idli', 'medu vada','dosa', 'uttapa','poha','upma'];
@@ -30,5 +31,4 @@ export class LearningComponent {
       console.log(age);
   }
 
-  
 }
