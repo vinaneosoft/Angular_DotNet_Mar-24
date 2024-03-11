@@ -14,6 +14,14 @@ export class LearningComponent {
  cities=['rabale','pune','dadar','parel'];
  menus =['idli', 'medu vada','dosa', 'uttapa','poha','upma'];
 
+ constructor(){
+  console.log("In LearningComponent");
+  window.setTimeout(()=>this.changeStyle(), 5000);
+ }
+
+  changeStyle(){
+    this.styleObject.backgroundColor="#00ffbf";
+  }
   display(){
     console.log(this.bankName);
     console.log(this.officeLocation);
@@ -29,6 +37,12 @@ export class LearningComponent {
   inputmethod2(age:any){
     console.log(typeof age);
       console.log(age);
+  }
+
+  styleObject={
+    backgroundColor:'yellow',
+    color:'red',
+    border:'4px solid blue'
   }
 
 }

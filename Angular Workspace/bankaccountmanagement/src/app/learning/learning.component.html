@@ -1,5 +1,5 @@
 
-<h3>{{bankName}}</h3><!-- string interpolation {{property from ts}}-->
+<h3  style="background: yellow; color: blue; border: 2px solid;">{{bankName}}</h3><!-- string interpolation {{property from ts}}-->
 <div>
     <label for="bank">Enter BankName:</label>
     <input type="text" name="bank" id="bank" [(ngModel)]="bankName" (keyup)="display()" (mouseenter)="test()">
@@ -20,7 +20,7 @@
 </div>
 <hr>
 <div>
-    <h3>IF</h3>
+    <h3 [ngStyle]="styleObject">IF</h3>
     <input type="number" [(ngModel)]="customerAge" placeholder="Enter Customer Age">
     <p>
         <i><span>Customer Age age is :</span>{{customerAge}}</i>
@@ -104,7 +104,7 @@
 <div>
 <input type="number" placeholder="enter percentage of student" [(ngModel)]="percentage">
 <div [ngSwitch]="true">
-    <p *ngSwitchCase="percentage>=70">
+    <p *ngSwitchCase="percentage>=70 && percentage<=100">
         <b>Your grade is FIRST CLASS with DISTICTION</b>
     </p>
     <p  *ngSwitchCase="percentage<70 && percentage>=60"> 
