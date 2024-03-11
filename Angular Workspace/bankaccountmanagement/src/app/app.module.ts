@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LearningComponent } from './learning/learning.component';
 import { FormsModule } from '@angular/forms';
 import { CustomerAccountComponent } from './customer-account/customer-account.component';
+import { AccountCardComponent } from './account-card/account-card.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CustomerAccountComponent } from './customer-account/customer-account.co
     HeaderComponent,
     NavbarComponent,
     LearningComponent,
-    CustomerAccountComponent
+    CustomerAccountComponent,
+    AccountCardComponent
   ],
   imports: [
     BrowserModule,
