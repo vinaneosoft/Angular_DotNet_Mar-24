@@ -1,17 +1,17 @@
 
-<div class="card bg-warning" style="width: 18rem;">
+<div class="card bg-warning border border-5 border-dark">
     <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">acc num: {{customerAccount.id}}</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <h5 class="card-title"><i>acc no. </i>{{customerAccount.id}}</h5>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Customer Id: {{customerAccount.customerId}}</li>
-      <li class="list-group-item">A second item</li>
-      <li class="list-group-item">A third item</li>
+      <li class="list-group-item"><i>Account created on </i><b>{{customerAccount.accountDate}}</b></li>
+      <li class="list-group-item"><i>Current Balance: </i><b>{{customerAccount.accountBalance}}</b></li>
+      <li class="list-group-item"><i>Customer Id: </i><b>{{customerAccount.customerId}}</b></li>
+      <li class="list-group-item"><i>Customer Name : </i><b>{{customerAccount.customerName}}</b></li>
+      <li class="list-group-item"><i>Type of Account : </i><b>{{customerAccount.accountType}}</b></li>
     </ul>
     <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
+      <a href="#" class="card-link">More Details</a>
     </div>
   </div>
