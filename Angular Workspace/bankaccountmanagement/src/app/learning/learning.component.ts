@@ -45,4 +45,5 @@ export class LearningComponent {
     border:'4px solid blue'
   }
 
+  styleArray=['fontStyle','borderStyle'];
 }

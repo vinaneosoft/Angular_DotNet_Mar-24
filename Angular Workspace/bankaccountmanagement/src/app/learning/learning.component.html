@@ -1,7 +1,7 @@
 
 <h3  style="background: yellow; color: blue; border: 2px solid;">{{bankName}}</h3><!-- string interpolation {{property from ts}}-->
 <div>
-    <label for="bank">Enter BankName:</label>
+    <label for="bank" class="FontStyle">Enter BankName:</label>
     <input type="text" name="bank" id="bank" [(ngModel)]="bankName" (keyup)="display()" (mouseenter)="test()">
     <!-- blur, mouseenter-->
 </div>
@@ -10,7 +10,8 @@
     <button type="button" (click)="inputmethod1(customerInput); inputmethod2(customerInput.value)">CLICK</button>
 </div>
 <div>
-    <label for="cities">Enter your office location:</label>
+    <button type="button" (click)="styleArray.pop()">POP</button>
+    <label for="cities" [ngClass]="styleArray">Enter your office location:</label>
     <select  id="cities" [(ngModel)]="officeLocation" (change)="display()">
         <option value="dadar">DADAR</option>
         <option value="rabale">RABALE</option>
@@ -23,7 +24,7 @@
     <h3 [ngStyle]="styleObject">IF</h3>
     <input type="number" [(ngModel)]="customerAge" placeholder="Enter Customer Age">
     <p>
-        <i><span>Customer Age age is :</span>{{customerAge}}</i>
+        <i><span [ngClass]="styleArray">Customer Age age is :</span>{{customerAge}}</i>
     </p>
     <p *ngIf="customerAge>=18">
         <b>YOUR AGE IS VALID</b>
