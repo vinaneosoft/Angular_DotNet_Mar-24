@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { BankAccount } from '../classes/bank-account';
+
 
 @Component({
   selector: 'app-account-card',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './account-card.component.css'
 })
 export class AccountCardComponent {
+  // account details???
 
+  @Input()// data in customerAccount is input from parent
+  customerAccount:BankAccount=new BankAccount();
 }
