@@ -16,7 +16,7 @@ export class CustomerAccountComponent {
   constructor(){
     this.createAccount();  
     this.accountForm=new FormGroup({
-      accountType:new FormControl(),
+      accountType:new FormControl("savings"),
       accountBalance:new FormControl(),
       customerName:new FormControl(),
       customerId:new FormControl(),
@@ -32,5 +32,9 @@ export class CustomerAccountComponent {
     this.bankAccounts.push(new BankAccount(1235000.123,"salary","SaNdesh Kane",111,88787878));
   }
 
+  getDetails(){
+    /* console.log(this.accountForm); */
+    console.log(this.accountForm.value);
+  }
 
 }

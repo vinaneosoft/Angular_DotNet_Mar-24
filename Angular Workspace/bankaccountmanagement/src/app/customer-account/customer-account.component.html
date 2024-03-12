@@ -19,10 +19,14 @@
 <button class="btn btn-success" (click)="showForm=!showForm" type="button">NEW ACCOUNT</button>
 <section class="bg-warning w-75" *ngIf="showForm">
     <h4>ACCOUNT INPUT FORM</h4>
-    <form [formGroup]="accountForm">
+    <form [formGroup]="accountForm" (submit)="getDetails()">
         <div class="mb-3">
           <label for="accountType" class="form-label">Account Type</label>
-          <input type="text" class="form-control" id="accountType" formControlName="accountType">
+          <select id="accountType" class="form-select" formControlName="accountType">
+            <option value="savings">SAVINGS</option>
+            <option value="current">CURRENT</option>
+            <option value="salary">SALARY</option>
+          </select>
         </div>
         <div class="mb-3">
             <label for="accountBalance" class="form-label">Set Balance</label>
