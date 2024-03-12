@@ -19,8 +19,8 @@ export class CustomerAccountComponent {
       accountType:new FormControl("savings"),
       accountBalance:new FormControl("", [Validators.required, Validators.min(0)]), //1.
       customerName:new FormControl("",[Validators.required, Validators.pattern("[a-zA-Z ]*"), Validators.minLength(2)]),
-      customerId:new FormControl("",[]),
-      id:new FormControl("",[]),
+      customerId:new FormControl("",[Validators.required]),
+      id:new FormControl("")
     });
   }
   createAccount(){
@@ -39,7 +39,13 @@ export class CustomerAccountComponent {
     return this.accountForm.get('accountBalance');  //2
   }
   get custname(){
-    return this.accountForm.get('customerName'); //2.
+    return this.accountForm.get('customerName'); 
+  }
+  get custid(){
+    return this.accountForm.get('customerId'); 
+  }
+  get accnum(){
+    return this.accountForm.get('id'); 
   }
 }
 /**
