@@ -32,9 +32,8 @@
             <label for="accountBalance" class="form-label">Set Balance</label>
             <input type="number" class="form-control" id="accountBalance" formControlName="accountBalance">
         </div>
-        <div>
-           <!--  {{accountForm.get('accountBalance')!.valid}} -->
-            <b><small>This field required</small></b>
+        <div *ngIf="balance!.touched" class="text-danger">
+            <b *ngIf="balance!.getError('required')"><small>This field required</small></b>
         </div>
         <div class="mb-3">
             <label for="customerId" class="form-label">Customer Id</label>
