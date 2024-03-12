@@ -46,6 +46,7 @@
         </div>
         <div *ngIf="custname!.touched" class="text-danger"> <!--3. -->
             <b *ngIf="custname!.getError('required')"><small>This field required</small></b>
+            <b *ngIf="custname!.getError('pattern') || custname!.getError('minlength')"><small>Please enter valid name</small></b>
         </div>
         <div class="mb-3">
             <label for="id" class="form-label">Account Number</label>
