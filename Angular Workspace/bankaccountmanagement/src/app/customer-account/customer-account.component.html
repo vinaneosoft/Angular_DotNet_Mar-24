@@ -32,8 +32,9 @@
             <label for="accountBalance" class="form-label">Set Balance</label>
             <input type="number" class="form-control" id="accountBalance" formControlName="accountBalance">
         </div>
-        <div *ngIf="balance!.touched" class="text-danger">
+        <div *ngIf="balance!.touched" class="text-danger"> <!--3. -->
             <b *ngIf="balance!.getError('required')"><small>This field required</small></b>
+            <b *ngIf="balance!.getError('min')"><small>only positive amount allowed</small></b>
         </div>
         <div class="mb-3">
             <label for="customerId" class="form-label">Customer Id</label>
@@ -48,7 +49,7 @@
             <input type="number" class="form-control" id="id" formControlName="id">
         </div>
        
-        <input type="submit" class="btn btn-primary m-2" value="CREATE ACCOUNT">
+        <input type="submit" class="btn btn-primary m-2" value="CREATE ACCOUNT" [disabled]="accountForm.invalid">
         <input type="reset" class="btn btn-primary">
       </form>
 </section>
