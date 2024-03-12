@@ -19,7 +19,8 @@ export class CustomerAccountComponent {
     this.bankAccounts.push(new BankAccount(13000.4563,"savings","SaMeer pujari",555,55555555,new Date('1 March 2000')));
     this.bankAccounts.push(new BankAccount(83000.45,"current","Radhika magar",787,86868686,new Date('12 May 2015')));
     this.bankAccounts.push(new BankAccount(123000,"current","Amar purohit",898,44444444));
-    this.bankAccounts.push(new BankAccount(1235000.123,"salary","SaNdesh Mane",121,78787878,new Date('15 Feb 2020')));
+    this.bankAccounts.push(new BankAccount(1235000.123,"salary","SaNdesh Mane",121,78787878,new Date('15 Nov 2020')));
+    this.bankAccounts.push(new BankAccount(1235000.123,"salary","SaNdesh Kane",111,88787878));
   }
 
 
