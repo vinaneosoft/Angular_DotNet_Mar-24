@@ -6,9 +6,8 @@ import { BankAccount } from '../classes/bank-account';
   styleUrl: './customer-account.component.css'
 })
 export class CustomerAccountComponent {
-
    bankAccounts=new Array<BankAccount>();
-
+    showForm=false;
    heading="";
    array:string[]=[]
   // we r going to manage all bank accounts here
