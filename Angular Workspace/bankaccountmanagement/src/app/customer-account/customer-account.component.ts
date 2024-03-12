@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BankAccount } from '../classes/bank-account';
+import { FormControl, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-customer-account',
   templateUrl: './customer-account.component.html',
@@ -9,10 +10,19 @@ export class CustomerAccountComponent {
    bankAccounts=new Array<BankAccount>();
     showForm=false;
    heading="";
-   array:string[]=[]
-  // we r going to manage all bank accounts here
+   array:string[]=[];
+   accountForm:FormGroup;
+   
   constructor(){
-    this.createAccount();  }
+    this.createAccount();  
+    this.accountForm=new FormGroup({
+      accountType:new FormControl(),
+      accountBalance:new FormControl(),
+      customerName:new FormControl(),
+      customerId:new FormControl(),
+      id:new FormControl()
+    });
+  }
   createAccount(){
     this.bankAccounts.push(new BankAccount(23000.78655,"current","poonam Shah",666,67676767,new Date('12 March 2000')));
     this.bankAccounts.push(new BankAccount(13000.4563,"savings","SaMeer pujari",555,55555555,new Date('1 March 2000')));
