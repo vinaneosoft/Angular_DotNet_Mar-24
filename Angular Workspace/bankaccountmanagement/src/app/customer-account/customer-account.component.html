@@ -19,26 +19,26 @@
 <button class="btn btn-success" (click)="showForm=!showForm" type="button">NEW ACCOUNT</button>
 <section class="bg-warning w-75" *ngIf="showForm">
     <h4>ACCOUNT INPUT FORM</h4>
-    <form>
+    <form [formGroup]="accountForm">
         <div class="mb-3">
           <label for="accountType" class="form-label">Account Type</label>
-          <input type="text" class="form-control" id="accountType">
+          <input type="text" class="form-control" id="accountType" formControlName="accountType">
         </div>
         <div class="mb-3">
             <label for="accountBalance" class="form-label">Set Balance</label>
-            <input type="number" class="form-control" id="accountBalance">
+            <input type="number" class="form-control" id="accountBalance" formControlName="accountBalance">
         </div>
         <div class="mb-3">
             <label for="customerId" class="form-label">Customer Id</label>
-            <input type="number" class="form-control" id="customerId">
+            <input type="number" class="form-control" id="customerId" formControlName="customerId">
         </div>
         <div class="mb-3">
             <label for="customerName" class="form-label">Customer Name</label>
-            <input type="text" class="form-control" id="customerName">
+            <input type="text" class="form-control" id="customerName" formControlName="customerName">
         </div>
         <div class="mb-3">
             <label for="id" class="form-label">Account Number</label>
-            <input type="number" class="form-control" id="id">
+            <input type="number" class="form-control" id="id" formControlName="id">
         </div>
        
         <input type="submit" class="btn btn-primary m-2" value="CREATE ACCOUNT">

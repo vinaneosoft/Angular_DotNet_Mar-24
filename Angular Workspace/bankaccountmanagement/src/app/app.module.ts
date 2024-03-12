@@ -25,7 +25,7 @@ import { OrderbyPipe } from './custompipes/orderby.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, FormsModule
+    AppRoutingModule, FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
