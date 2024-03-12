@@ -18,7 +18,7 @@ export class CustomerAccountComponent {
     this.accountForm=new FormGroup({
       accountType:new FormControl("savings"),
       accountBalance:new FormControl("", [Validators.required, Validators.min(0)]), //1.
-      customerName:new FormControl("",[]),
+      customerName:new FormControl("",[Validators.required]),
       customerId:new FormControl("",[]),
       id:new FormControl("",[]),
     });
@@ -37,6 +37,9 @@ export class CustomerAccountComponent {
   }
   get balance(){
     return this.accountForm.get('accountBalance');  //2
+  }
+  get custname(){
+    return this.accountForm.get('customerName'); //2.
   }
 }
 /**
