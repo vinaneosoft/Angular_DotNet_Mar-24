@@ -6,12 +6,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class OrderbyPipe implements PipeTransform {
 
   transform(value: any[], ...args: any[]): any[] {
-    console.log(value);
-    
-    console.log(args[0]);
-    
+    //console.log(value); 
+   // console.log(args[0]);  
     const property=args[0];
-    return value.sort((ob1,ob2)=>ob1[property]>ob2[property]?1:-1)
+    return value.sort((account1,account2)=>account1[property]>account2[property]?1:-1)
   }
   
 }
