@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BankAccount } from '../classes/bank-account';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-customer-account',
   templateUrl: './customer-account.component.html',
@@ -17,7 +17,7 @@ export class CustomerAccountComponent {
     this.createAccount();  
     this.accountForm=new FormGroup({
       accountType:new FormControl("savings"),
-      accountBalance:new FormControl(),
+      accountBalance:new FormControl(""),
       customerName:new FormControl(),
       customerId:new FormControl(),
       id:new FormControl()
@@ -31,8 +31,7 @@ export class CustomerAccountComponent {
     this.bankAccounts.push(new BankAccount(1235000.123,"salary","SaNdesh Mane",121,78787878,new Date('15 Nov 2020')));
     this.bankAccounts.push(new BankAccount(1235000.123,"salary","SaNdesh Kane",111,88787878));
   }
-
-  getDetails(){
+  setDetails(){
     /* console.log(this.accountForm); */
     console.log(this.accountForm.value);
   }
