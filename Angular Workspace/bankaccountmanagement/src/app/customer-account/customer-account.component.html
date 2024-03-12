@@ -53,7 +53,21 @@
         </div>  
         <div class="mb-3">
             <label for="password" class="form-label">Set password</label>
-            <input type="password" class="form-control" id="password" formControlName="password">
+            <input type="text" class="form-control" id="password" formControlName="password">
+            <div *ngIf="pass!.touched" class="text-danger"> <!--3. -->
+                <b *ngIf="pass!.getError('required')"><small>This field required</small></b>
+                <ul *ngIf="pass!.getError('pattern')">
+                    <li>password must contain atleast one
+                        <ul>
+                            <li>Capital letter</li>
+                            <li>Small letter</li>
+                            <li>number</li>
+                            <li>{{"Symbol from [#?!@$%^&*-]"}}</li>
+                        </ul>
+                    </li>
+                    <li>password must be 8 to 20 characters long</li>
+                </ul>
+            </div>
         </div>  
         <div class="mb-3">
             <label for="confirmpass" class="form-label">Confirm password</label>

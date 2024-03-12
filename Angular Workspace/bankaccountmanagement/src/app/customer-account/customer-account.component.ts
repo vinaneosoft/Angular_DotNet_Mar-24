@@ -12,7 +12,7 @@ export class CustomerAccountComponent {
    heading="";
    array:string[]=[];
    accountForm:FormGroup;
-   
+   passwordPattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,20}";
   constructor(){
     this.createAccount();  
     this.accountForm=new FormGroup({
@@ -21,7 +21,7 @@ export class CustomerAccountComponent {
       customerName:new FormControl("",[Validators.required, Validators.pattern("[a-zA-Z ]*"), Validators.minLength(2)]),
       customerId:new FormControl("",[Validators.required]),
       id:new FormControl(""),
-      password:new FormControl(""),
+      password:new FormControl("",[Validators.required, Validators.pattern(this.passwordPattern)]),
       confirmPassword:new FormControl("")
     });
   }
@@ -48,6 +48,9 @@ export class CustomerAccountComponent {
   }
   get accnum(){
     return this.accountForm.get('id'); 
+  }
+  get pass(){
+    return this.accountForm.get('password'); 
   }
 }
 /**
