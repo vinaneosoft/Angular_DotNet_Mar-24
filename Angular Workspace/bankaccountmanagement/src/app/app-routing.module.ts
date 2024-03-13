@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ViewNotFoundComponent } from './view-not-found/view-not-found.component';
 import { SavingsAccountComponent } from './savings-account/savings-account.component';
 import { SalaryAccountComponent } from './salary-account/salary-account.component';
+import { CustomerComponent } from './customer/customer.component';
 
 const routes: Routes = [
  { path:"", redirectTo:"home", pathMatch:'full'},
@@ -19,6 +20,7 @@ const routes: Routes = [
  },
  { path:"bankaccounts" , component:CustomerAccountComponent},
  { path:"login" , component:LoginComponent},
+ { path:"customer/:custId", component:CustomerComponent},
  { path:'**', component:ViewNotFoundComponent}
 ];
 
