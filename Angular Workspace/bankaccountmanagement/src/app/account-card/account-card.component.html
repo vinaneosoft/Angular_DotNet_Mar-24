@@ -17,7 +17,7 @@
       <li class="list-group-item"><i>Type of Account : </i><b>{{customerAccount.accountType | uppercase}}</b></li>
     </ul>
     <div class="card-body">
-      <a href="#" class="card-link">More Details about customer</a>
+      <a [routerLink]="['/customer', customerAccount.customerId]" class="card-link">More Details about Customer</a>
     </div>
   </div>
   <div>
