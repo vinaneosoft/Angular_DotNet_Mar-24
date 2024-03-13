@@ -22,7 +22,7 @@ export class CustomerAccountComponent {
       customerId:new FormControl("",[Validators.required]),
       id:new FormControl(""),
       password:new FormControl("",[Validators.required, Validators.pattern(this.passwordPattern)]),
-      confirmPassword:new FormControl("")
+      confirmPassword:new FormControl("", [Validators.required])
     });
   }
   createAccount(){
@@ -52,6 +52,10 @@ export class CustomerAccountComponent {
   get pass(){
     return this.accountForm.get('password'); 
   }
+  get confirmpass(){
+    return this.accountForm.get('confirmPassword'); 
+  }
+
 }
 /**
  * 
