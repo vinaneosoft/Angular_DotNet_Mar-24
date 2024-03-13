@@ -71,7 +71,7 @@
         </div>  
         <div class="mb-3">
             <label for="confirmpass" class="form-label">Confirm password</label>
-            <input type="text" class="form-control" id="confirmpass" formControlName="confirmPassword">
+            <input type="text" class="form-control" id="confirmpass" formControlName="confirmPassword" [ngStyle]="setBorder()">
             <div *ngIf="confirmpass!.touched" class="text-danger"> <!--3. -->
                 <b *ngIf="confirmpass!.getError('required')"><small>This field required</small></b>
                 <b *ngIf="accountForm!.getError('mismatch')"><small>Both passwords must be matched</small></b>

@@ -57,6 +57,12 @@ export class CustomerAccountComponent {
     return this.accountForm.get('confirmPassword'); 
   }
 
+  setBorder(){
+    if(this.confirmpass!.getError('required') || this.accountForm.getError('mismatch'))
+     return {border:"2px solid red"}
+    else
+     return {border:"2px solid green"}
+  }
 }
 /**
  * 
