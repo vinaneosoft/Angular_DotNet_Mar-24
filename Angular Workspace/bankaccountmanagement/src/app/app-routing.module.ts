@@ -13,8 +13,8 @@ const routes: Routes = [
     path:"home" , 
     component:HomeComponent, 
     children: [
-      {path:'savingsacc', component:SavingsAccountComponent},
-      {path:'salaryacc', component:SalaryAccountComponent},
+      { path:'savingsacc', component:SavingsAccountComponent },
+      { path:'salaryacc', component:SalaryAccountComponent },
     ]
  },
  { path:"bankaccounts" , component:CustomerAccountComponent},

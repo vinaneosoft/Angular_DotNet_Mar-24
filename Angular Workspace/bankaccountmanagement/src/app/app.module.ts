@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { ViewNotFoundComponent } from './view-not-found/view-not-found.component';
 import { SavingsAccountComponent } from './savings-account/savings-account.component';
 import { SalaryAccountComponent } from './salary-account/salary-account.component';
+import { CustomerComponent } from './customer/customer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SalaryAccountComponent } from './salary-account/salary-account.componen
     HomeComponent,
     ViewNotFoundComponent,
     SavingsAccountComponent,
-    SalaryAccountComponent
+    SalaryAccountComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,
