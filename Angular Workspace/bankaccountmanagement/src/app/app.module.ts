@@ -12,6 +12,8 @@ import { AccountCardComponent } from './account-card/account-card.component';
 import { PrefixPipe } from './custompipes/prefix.pipe';
 import { OrderbyPipe } from './custompipes/orderby.pipe';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { ViewNotFoundComponent } from './view-not-found/view-not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { LoginComponent } from './login/login.component';
     AccountCardComponent,
     PrefixPipe,
     OrderbyPipe,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    ViewNotFoundComponent
   ],
   imports: [
     BrowserModule,
