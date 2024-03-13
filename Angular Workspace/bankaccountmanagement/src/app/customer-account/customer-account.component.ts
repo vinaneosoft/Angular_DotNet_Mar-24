@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BankAccount } from '../classes/bank-account';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { CustomValidators } from '../classes/custom-validators';
 @Component({
   selector: 'app-customer-account',
   templateUrl: './customer-account.component.html',
@@ -23,7 +24,7 @@ export class CustomerAccountComponent {
       id:new FormControl(""),
       password:new FormControl("",[Validators.required, Validators.pattern(this.passwordPattern)]),
       confirmPassword:new FormControl("", [Validators.required])
-    });
+    }, CustomValidators.matchPassword);
   }
   createAccount(){
     this.bankAccounts.push(new BankAccount(23000.78655,"current",'x123',"poonam Shah",666,67676767,new Date('12 March 2000')));
@@ -71,4 +72,15 @@ export class CustomerAccountComponent {
  *    return {min :.....}
  * else
  *    return null
+ */
+
+/**
+ * create 1 custom validator class
+ * 
+ * create custom validation funcion
+ * put ur logic of comparing passowrds
+ *  if(pass not matiching)
+ *  return {'userdefinedKey':true}
+ * else
+ * return null
  */
