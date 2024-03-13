@@ -14,6 +14,8 @@ import { OrderbyPipe } from './custompipes/orderby.pipe';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ViewNotFoundComponent } from './view-not-found/view-not-found.component';
+import { SavingsAccountComponent } from './savings-account/savings-account.component';
+import { SalaryAccountComponent } from './salary-account/salary-account.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ViewNotFoundComponent } from './view-not-found/view-not-found.component
     OrderbyPipe,
     LoginComponent,
     HomeComponent,
-    ViewNotFoundComponent
+    ViewNotFoundComponent,
+    SavingsAccountComponent,
+    SalaryAccountComponent
   ],
   imports: [
     BrowserModule,

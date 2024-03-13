@@ -4,13 +4,22 @@ import { CustomerAccountComponent } from './customer-account/customer-account.co
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ViewNotFoundComponent } from './view-not-found/view-not-found.component';
+import { SavingsAccountComponent } from './savings-account/savings-account.component';
+import { SalaryAccountComponent } from './salary-account/salary-account.component';
 
 const routes: Routes = [
- { path:"home" , component:HomeComponent},
+ { path:"", redirectTo:"home", pathMatch:'full'},
+ { 
+    path:"home" , 
+    component:HomeComponent, 
+    children: [
+      {path:'savingsacc', component:SavingsAccountComponent},
+      {path:'salaryacc', component:SalaryAccountComponent},
+    ]
+ },
  { path:"bankaccounts" , component:CustomerAccountComponent},
- { path:"login" , component:LoginComponent} ,
+ { path:"login" , component:LoginComponent},
  { path:'**', component:ViewNotFoundComponent}
-
 ];
 
 @NgModule({
