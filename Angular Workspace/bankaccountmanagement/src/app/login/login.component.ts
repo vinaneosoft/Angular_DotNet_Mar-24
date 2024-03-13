@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  login(loginForm:any){
+  console.log(loginForm.value);
+  console.log(loginForm.value.username);
+  console.log(loginForm.value.password);
+  }
 }
