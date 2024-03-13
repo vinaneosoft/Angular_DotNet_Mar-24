@@ -1,0 +1,4 @@
+Implement new project for CRUD operations for any other entity
+e.g. Employee, Student, Company, College, Department
+
+Routing : HOME, SHOW ENITY--> ENTITY CARD
