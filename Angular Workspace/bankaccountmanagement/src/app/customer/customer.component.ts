@@ -11,6 +11,7 @@ export class CustomerComponent {
   customers:Customer[];
   param:any;
   customerId=0;
+  customerFound: Customer | undefined;
   constructor(public routeService:ActivatedRoute) // service object automatically injected in constructor of component: DI
   {
     this.customers=[
@@ -27,10 +28,9 @@ export class CustomerComponent {
       this.param=this.routeService.snapshot.params['custId'];
       this.customerId=parseInt(this.param);
       //console.log(this.customerId);
-     // this.findCustomer();
+      this.findCustomer();
   }
-
   findCustomer(){
-    this.customers.find(customer=>customer.customerId==this.customerId);
+    this.customerFound=this.customers.find(customer=>customer.customerId==this.customerId);
   }
 }

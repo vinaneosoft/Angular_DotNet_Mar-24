@@ -20,6 +20,7 @@ const routes: Routes = [
  },
  { path:"bankaccounts" , component:CustomerAccountComponent},
  { path:"login" , component:LoginComponent},
+ { path:"customer", component:CustomerComponent},
  { path:"customer/:custId", component:CustomerComponent},
  { path:'**', component:ViewNotFoundComponent}
 ];

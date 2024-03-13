@@ -1,16 +1,23 @@
-<section>
+<section *ngIf="customerFound==null">
     <table class="table table-hover">
         <thead></thead>
         <tbody>
             <tr *ngFor="let customer of customers">
-                <span *ngIf="customer.customerId==customerId then thenpart"></span>
-                <ng-template #thenpart>
                     <td>{{customer.customerId}}</td>
                     <td>{{customer.customerName}}</td>
                     <td>{{customer.customerContact}}</td>
                     <td>{{customer.emailId}}</td>
-                </ng-template>
             </tr>
         </tbody>
+    </table>
+</section>
+<section *ngIf="customerFound!=null">
+    <table class="table table-hover">
+        <tr>
+            <td>{{customerFound!.customerId}}</td>
+            <td>{{customerFound!.customerName}}</td>
+            <td>{{customerFound!.customerContact}}</td>
+            <td>{{customerFound!.emailId}}</td>
+        </tr>
     </table>
 </section>
