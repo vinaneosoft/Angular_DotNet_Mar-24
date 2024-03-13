@@ -11,5 +11,6 @@ export class LoginComponent {
   console.log(loginForm.value);
   console.log(loginForm.value.username);
   console.log(loginForm.value.password);
+  // we will call service loginCheck function to test correct username and password
   }
 }
