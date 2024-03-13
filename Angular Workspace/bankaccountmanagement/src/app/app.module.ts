@@ -11,6 +11,7 @@ import { CustomerAccountComponent } from './customer-account/customer-account.co
 import { AccountCardComponent } from './account-card/account-card.component';
 import { PrefixPipe } from './custompipes/prefix.pipe';
 import { OrderbyPipe } from './custompipes/orderby.pipe';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { OrderbyPipe } from './custompipes/orderby.pipe';
     CustomerAccountComponent,
     AccountCardComponent,
     PrefixPipe,
-    OrderbyPipe
+    OrderbyPipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
