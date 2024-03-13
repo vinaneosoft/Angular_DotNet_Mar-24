@@ -27,5 +27,10 @@ export class CustomerComponent {
       this.param=this.routeService.snapshot.params['custId'];
       this.customerId=parseInt(this.param);
       //console.log(this.customerId);
+     // this.findCustomer();
+  }
+
+  findCustomer(){
+    this.customers.find(customer=>customer.customerId==this.customerId);
   }
 }

@@ -3,10 +3,13 @@
         <thead></thead>
         <tbody>
             <tr *ngFor="let customer of customers">
-                <td>{{customer.customerId}}</td>
-                <td>{{customer.customerName}}</td>
-                <td>{{customer.customerContact}}</td>
-                <td>{{customer.emailId}}</td>
+                <span *ngIf="customer.customerId==customerId then thenpart"></span>
+                <ng-template #thenpart>
+                    <td>{{customer.customerId}}</td>
+                    <td>{{customer.customerName}}</td>
+                    <td>{{customer.customerContact}}</td>
+                    <td>{{customer.emailId}}</td>
+                </ng-template>
             </tr>
         </tbody>
     </table>
