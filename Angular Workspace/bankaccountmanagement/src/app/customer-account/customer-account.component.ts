@@ -37,6 +37,8 @@ export class CustomerAccountComponent {
   setDetails(){
     /* console.log(this.accountForm); */
     console.log(this.accountForm.value);
+    // storing all form values in account object
+    // addAccount (object)
   }
   get balance(){
     return this.accountForm.get('accountBalance');  //2

@@ -17,8 +17,8 @@ import { ViewNotFoundComponent } from './view-not-found/view-not-found.component
 import { SavingsAccountComponent } from './savings-account/savings-account.component';
 import { SalaryAccountComponent } from './salary-account/salary-account.component';
 import { CustomerComponent } from './customer/customer.component';
-import { ActivatedRoute } from '@angular/router';
 import { MathsService } from './myservices/maths.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,7 +39,7 @@ import { MathsService } from './myservices/maths.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, FormsModule, ReactiveFormsModule
+    AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule
   ],
   providers: [MathsService],
   bootstrap: [AppComponent]
