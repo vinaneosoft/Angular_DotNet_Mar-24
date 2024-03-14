@@ -12,6 +12,7 @@ export class AccountCRUDService {
   { }
 
   addAccount(account:BankAccount){
+    /** post => address, data   data is sent safely via request body*/
       return this.http.post(this.serveraddress,account); // backend request
   }
 }
