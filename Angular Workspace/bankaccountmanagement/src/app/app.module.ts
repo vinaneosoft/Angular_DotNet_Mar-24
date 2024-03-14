@@ -17,6 +17,8 @@ import { ViewNotFoundComponent } from './view-not-found/view-not-found.component
 import { SavingsAccountComponent } from './savings-account/savings-account.component';
 import { SalaryAccountComponent } from './salary-account/salary-account.component';
 import { CustomerComponent } from './customer/customer.component';
+import { ActivatedRoute } from '@angular/router';
+import { MathsService } from './myservices/maths.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,7 @@ import { CustomerComponent } from './customer/customer.component';
     BrowserModule,
     AppRoutingModule, FormsModule, ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ActivatedRoute, MathsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
