@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { MathsService } from '../myservices/maths.service';
+import { ABC, MathsService } from '../myservices/maths.service';
 
 @Component({
   selector: 'app-savings-account',
   templateUrl: './savings-account.component.html',
-  styleUrl: './savings-account.component.css'
+  styleUrl: './savings-account.component.css',
+  providers:[MathsService]
 })
 export class SavingsAccountComponent {
 
