@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BankAccount } from '../classes/bank-account';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CustomValidators } from '../classes/custom-validators';
+import { AccountCRUDService } from '../myservices/account-crud.service';
 @Component({
   selector: 'app-customer-account',
   templateUrl: './customer-account.component.html',
@@ -14,7 +15,7 @@ export class CustomerAccountComponent {
    array:string[]=[];
    accountForm:FormGroup;
    passwordPattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,20}";
-  constructor(){
+  constructor(private accCrud:AccountCRUDService   ){
     this.createAccount();  
     this.accountForm=new FormGroup({
       accountType:new FormControl("savings"),
@@ -37,9 +38,13 @@ export class CustomerAccountComponent {
   setDetails(){
     //console.log(this.accountForm.value);
     let bankAccount:BankAccount=this.accountForm.value;
-    bankAccount.accountDate=new Date();
-    console.log(bankAccount);
+    bankAccount.accountDate=new Date(); // system date
+   // console.log(bankAccount);
     // addAccount (object)
+     this.accCrud.addAccount(bankAccount).subscribe({
+      next:scc=>console.log("SUCCESS", scc),
+      error:err=>console.log(err)
+     });
   }
   get balance(){
     return this.accountForm.get('accountBalance');  //2
