@@ -13,6 +13,6 @@ export class SalaryAccountComponent {
   }
   getCount(){
     this.maths2.incrementCounter();
-    this.maths2.getCounter();
+    this.counter2=this.maths2.getCounter();
   }
 }

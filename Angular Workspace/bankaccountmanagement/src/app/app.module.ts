@@ -41,7 +41,7 @@ import { MathsService } from './myservices/maths.service';
     BrowserModule,
     AppRoutingModule, FormsModule, ReactiveFormsModule
   ],
-  providers: [ActivatedRoute, MathsService],
+  providers: [MathsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
