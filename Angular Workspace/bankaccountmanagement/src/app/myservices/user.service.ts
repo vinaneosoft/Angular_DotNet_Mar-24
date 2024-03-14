@@ -18,4 +18,8 @@ export class UserService {
       this.loginFlag=false;
     return this.loginFlag;
   }
+
+  logOut(){
+    this.loginFlag=false;
+  }
 }
