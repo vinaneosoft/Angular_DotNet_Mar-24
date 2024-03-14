@@ -7,11 +7,11 @@ import { UserService } from '../myservices/user.service';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
- 
+  flag=false;
   constructor(private userService:UserService){}
   login(loginForm:any){
-  this.userService.loginCheck(loginForm.value.username,loginForm.value.password);
-  if(this.userService.loginFlag)
+  this.flag=this.userService.loginCheck(loginForm.value.username,loginForm.value.password);
+  if(this.flag)
     // navigation logic
   else
   // incorrect username password logic
