@@ -14,4 +14,7 @@ export class AccountCRUDService {
     /** post => address, data   data is sent safely via request body*/
       return this.http.post(this.serveraddress,account); // backend request
   }
+  getAllAccounts(){
+    return this.http.get(this.serveraddress);  // backend request
+  }
 }

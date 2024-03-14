@@ -16,7 +16,7 @@ export class CustomerAccountComponent {
    accountForm:FormGroup;
    passwordPattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,20}";
   constructor(private accCrud:AccountCRUDService   ){
-    this.createAccount();  
+    this.getAccounts();  
     this.accountForm=new FormGroup({
       accountType:new FormControl("savings"),
       accountBalance:new FormControl("", [Validators.required, Validators.min(0)]), //1.
@@ -27,13 +27,19 @@ export class CustomerAccountComponent {
       confirmPassword:new FormControl("", [Validators.required])
     }, CustomValidators.matchPassword);
   }
-  createAccount(){
-    this.bankAccounts.push(new BankAccount(23000.78655,"current",'x123',"poonam Shah",666,67676767,new Date('12 March 2000')));
-    this.bankAccounts.push(new BankAccount(13000.4563,"savings","x123","SaMeer pujari",555,55555555,new Date('1 March 2000')));
-    this.bankAccounts.push(new BankAccount(83000.45,"current","x123","Radhika magar",787,86868686,new Date('12 May 2015')));
-    this.bankAccounts.push(new BankAccount(123000,"current","x123","Amar purohit",898,44444444));
-    this.bankAccounts.push(new BankAccount(1235000.123,"salary","x123","SaNdesh Mane",121,78787878,new Date('15 Nov 2020')));
-    this.bankAccounts.push(new BankAccount(1235000.123,"salary","x123","SaNdesh Kane",111,88787878));
+  getAccounts(){
+    //this.bankAccounts.push(new BankAccount(23000.78655,"current",'x123',"poonam Shah",666,67676767,new Date('12 March 2000')));
+    //this.bankAccounts.push(new BankAccount(13000.4563,"savings","x123","SaMeer pujari",555,55555555,new Date('1 March 2000')));
+    //this.bankAccounts.push(new BankAccount(83000.45,"current","x123","Radhika magar",787,86868686,new Date('12 May 2015')));
+   // this.bankAccounts.push(new BankAccount(123000,"current","x123","Amar purohit",898,44444444));
+   // this.bankAccounts.push(new BankAccount(1235000.123,"salary","x123","SaNdesh Mane",121,78787878,new Date('15 Nov 2020')));
+   // this.bankAccounts.push(new BankAccount(1235000.123,"salary","x123","SaNdesh Kane",111,88787878));
+  this.accCrud.getAllAccounts().subscribe({
+    next:data=>console.log(data),
+    error:err=>console.log(err)
+  })
+  
+  
   }
   setDetails(){
     //console.log(this.accountForm.value);

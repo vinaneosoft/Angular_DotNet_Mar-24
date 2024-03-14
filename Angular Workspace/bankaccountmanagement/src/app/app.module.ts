@@ -41,7 +41,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule
   ],
-  providers: [MathsService],
+  providers: [MathsService], /**The set of injectable objects that are available in the injector of this module */
   bootstrap: [AppComponent]
 })
 export class AppModule { }
