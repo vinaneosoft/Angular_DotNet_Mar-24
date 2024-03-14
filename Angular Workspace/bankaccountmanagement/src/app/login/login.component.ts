@@ -8,12 +8,15 @@ import { UserService } from '../myservices/user.service';
 })
 export class LoginComponent {
   flag=false;
+  loginError="";
   constructor(private userService:UserService){}
   login(loginForm:any){
   this.flag=this.userService.loginCheck(loginForm.value.username,loginForm.value.password);
   if(this.flag)
-    // navigation logic
+    {// navigation logic
+    }
   else
-  // incorrect username password logic
+      this.loginError="Incorrect username or password"
+    
   }
 }
