@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from '../myservices/user.service';
 
 @Component({
   selector: 'app-login',
@@ -6,11 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-
+ 
+  constructor(private userService:UserService){}
   login(loginForm:any){
-  console.log(loginForm.value);
-  console.log(loginForm.value.username);
-  console.log(loginForm.value.password);
-  // we will call service loginCheck function to test correct username and password
+  this.userService.loginCheck(loginForm.value.username,loginForm.value.password);
+  if(this.userService.loginFlag)
+    // navigation logic
+  else
+  // incorrect username password logic
   }
 }
