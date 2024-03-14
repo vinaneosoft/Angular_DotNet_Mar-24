@@ -10,7 +10,6 @@ export class AccountCRUDService {
   serveraddress="http://localhost:3000/accounts";
   constructor(private http:HttpClient) 
   { }
-
   addAccount(account:BankAccount){
     /** post => address, data   data is sent safely via request body*/
       return this.http.post(this.serveraddress,account); // backend request

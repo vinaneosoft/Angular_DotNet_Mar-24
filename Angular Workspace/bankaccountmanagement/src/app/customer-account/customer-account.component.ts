@@ -35,9 +35,10 @@ export class CustomerAccountComponent {
     this.bankAccounts.push(new BankAccount(1235000.123,"salary","x123","SaNdesh Kane",111,88787878));
   }
   setDetails(){
-    /* console.log(this.accountForm); */
-    console.log(this.accountForm.value);
-    // storing all form values in account object
+    //console.log(this.accountForm.value);
+    let bankAccount:BankAccount=this.accountForm.value;
+    bankAccount.accountDate=new Date();
+    console.log(bankAccount);
     // addAccount (object)
   }
   get balance(){
