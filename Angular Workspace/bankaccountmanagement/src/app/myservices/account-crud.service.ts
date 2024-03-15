@@ -20,6 +20,6 @@ export class AccountCRUDService {
 
   deleteAccountByAccNum(accountNumber:number){
     //id is attached in url
-    this.http.delete(this.serveraddress+"/"+accountNumber);
+    return this.http.delete(this.serveraddress+"/"+accountNumber);
   }
 }

@@ -52,6 +52,16 @@ export class CustomerAccountComponent {
       error:err=>console.log(err)
      });
   }
+  
+  deleteAccount(accountNumber:number){
+    this.accCrud.deleteAccountByAccNum(accountNumber).subscribe({
+      next:scc=>window.alert("Account deleted Successfully...."),
+      error:err=>console.log(err)
+     });
+  }
+
+
+
   get balance(){
     return this.accountForm.get('accountBalance');  //2
   }
