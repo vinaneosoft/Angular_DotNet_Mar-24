@@ -53,7 +53,9 @@ export class CustomerAccountComponent {
   createAccount(formAccount:BankAccount){
     formAccount.accountDate=new Date(); // system date
       this.accCrud.addAccount(formAccount).subscribe({
-       next:scc=>{this.getAccounts();
+       next:scc=>{
+        window.alert("Account added Successfully...");
+        this.getAccounts();
         this.resetForm();
       },
        error:err=>console.log(err)
