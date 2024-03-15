@@ -85,8 +85,9 @@
             </div>
         </div>
        
-        <input type="submit" class="btn btn-primary m-2" [value]="editFlag ? 'UPDATE ACCOUNT': 'CREATE ACCOUNT' " [disabled]="accountForm.invalid">
-        <input type="reset" class="btn btn-primary">
+        <input type="submit" class="btn btn-primary me-2" [value]="editFlag ? 'UPDATE ACCOUNT': 'CREATE ACCOUNT' " [disabled]="accountForm.invalid">
+        <input type="reset" class="btn btn-primary me-2" >
+        <button type="button" class="btn btn-info" (click)="resetForm()">CANCEL</button>
       </form>
 </section>
 
