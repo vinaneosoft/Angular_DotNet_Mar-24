@@ -35,7 +35,7 @@ export class CustomerAccountComponent {
    // this.bankAccounts.push(new BankAccount(1235000.123,"salary","x123","SaNdesh Mane",121,78787878,new Date('15 Nov 2020')));
    // this.bankAccounts.push(new BankAccount(1235000.123,"salary","x123","SaNdesh Kane",111,88787878));
   this.accCrud.getAllAccounts().subscribe({
-    next:data=>console.log(data),
+    next:data=>this.bankAccounts=data as BankAccount[],
     error:err=>console.log(err)
   })
   
@@ -48,7 +48,7 @@ export class CustomerAccountComponent {
    // console.log(bankAccount);
     // addAccount (object)
      this.accCrud.addAccount(bankAccount).subscribe({
-      next:scc=>console.log("SUCCESS", scc),
+      next:scc=>this.getAccounts(),
       error:err=>console.log(err)
      });
   }

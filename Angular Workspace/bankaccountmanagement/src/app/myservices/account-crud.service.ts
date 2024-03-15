@@ -17,4 +17,9 @@ export class AccountCRUDService {
   getAllAccounts(){
     return this.http.get(this.serveraddress);  // backend request
   }
+
+  deleteAccountByAccNum(accountNumber:number){
+    //id is attached in url
+    this.http.delete(this.serveraddress+"/"+accountNumber);
+  }
 }
