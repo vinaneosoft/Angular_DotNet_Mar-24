@@ -10,7 +10,7 @@ import { AccountCRUDService } from '../myservices/account-crud.service';
 })
 export class CustomerAccountComponent {
   
-   bankAccount:BankAccount | undefined;
+   bankAccount:BankAccount=new BankAccount();
    bankAccounts=new Array<BankAccount>();
    editFlag=false;
     showForm=false;
@@ -44,24 +44,23 @@ export class CustomerAccountComponent {
   
   }
   setDetails(){
-    let bankAccount:BankAccount=this.accountForm.value;
+    let formAccount:BankAccount=this.accountForm.value;
     if(this.editFlag)
-       this.updateAccount(bankAccount)  //  object with updated values
+       this.updateAccount(formAccount)  //  object with updated values
     else
-       this.createAccount(bankAccount); //  object with new values
+       this.createAccount(formAccount); //  object with new values
   }
-  createAccount(bankAccount:BankAccount){
-    bankAccount.accountDate=new Date(); // system date
-      this.accCrud.addAccount(bankAccount).subscribe({
+  createAccount(formAccount:BankAccount){
+    formAccount.accountDate=new Date(); // system date
+      this.accCrud.addAccount(this.bankAccount).subscribe({
        next:scc=>this.getAccounts(),
        error:err=>console.log(err)
       });
   }
-  updateAccount(bankAccount:BankAccount){
-    console.log(bankAccount);
+  updateAccount(formAccount:BankAccount){
+    formAccount.accountDate=this.bankAccount.accountDate;
+    console.log(formAccount);
   }
-
-
   deleteAccount(accountNumber:number){
     this.accCrud.deleteAccountByAccNum(accountNumber).subscribe({
       next:scc=>{window.alert("Account deleted Successfully....");this.getAccounts() },
@@ -70,7 +69,7 @@ export class CustomerAccountComponent {
   }
   getAccount(account:BankAccount){
     this.bankAccount=account;
-    console.log(this.bankAccount);
+    console.log(this.bankAccount);  // date available
     
     this.acctype!.setValue(this.bankAccount.accountType);
     this.balance!.setValue(this.bankAccount.accountBalance);
