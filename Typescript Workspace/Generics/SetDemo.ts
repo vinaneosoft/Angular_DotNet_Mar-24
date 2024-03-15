@@ -4,11 +4,11 @@ let cities=new Set<string>();
 cities.add("mumbai")
 cities.add("Solapur")
 cities.add("mumbai")
-cities.add(7989);
+//cities.add(7989);
 cities.add("Thane")
 cities.add("Pune")
-
 console.log(cities);
+
 console.log(cities.has('Pune'));
 console.log(cities.delete('Pune'));
 console.log(cities.has('Pune'));
@@ -21,6 +21,7 @@ empids.add(116);
 empids.add(457);
 empids.add(356);
 empids.add(456); // duplcate override
+console.log(empids);
 
 let itr1=cities.values();
 while(true){

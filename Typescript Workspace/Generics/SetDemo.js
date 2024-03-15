@@ -1,8 +1,9 @@
 // unique collection, non indexed collection
 let cities = new Set();
 cities.add("mumbai");
-cities.add("Mumbai");
+cities.add("Solapur");
 cities.add("mumbai");
+//cities.add(7989);
 cities.add("Thane");
 cities.add("Pune");
 console.log(cities);
@@ -11,6 +12,13 @@ console.log(cities.delete('Pune'));
 console.log(cities.has('Pune'));
 console.log(cities.size);
 cities.forEach(ele => console.log(ele));
+let empids = new Set();
+empids.add(456);
+empids.add(116);
+empids.add(457);
+empids.add(356);
+empids.add(456); // duplcate override
+console.log(empids);
 let itr1 = cities.values();
 while (true) {
     let entry = itr1.next();
@@ -43,3 +51,12 @@ for (let ele of cityArray) {
     citySet.add(ele.toLowerCase());
 }
 console.log(citySet);
+/**
+ *  add(value:T){
+ *       // logic to add element in Set
+ *  }
+ *
+ *  has(value: T): boolean{
+ *      // logic to check availability of value in set
+ *  }
+ */ 

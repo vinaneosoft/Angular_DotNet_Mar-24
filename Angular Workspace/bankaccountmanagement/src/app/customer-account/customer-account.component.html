@@ -38,7 +38,7 @@
         </div>
         <div class="mb-3">
             <label for="customerId" class="form-label">Customer Id</label>
-            <input type="number" class="form-control" id="customerId" formControlName="customerId">
+            <input type="number" class="form-control" id="customerId" formControlName="customerId" [readonly]="editFlag">
             <div *ngIf="custid!.touched" class="text-danger"> <!--3. -->
                 <b *ngIf="custid!.getError('required')"><small>This field required</small></b>
             </div>
@@ -79,7 +79,7 @@
         </div>  
         <div class="mb-3">
             <label for="id" class="form-label">Account Number</label>
-            <input type="number" class="form-control" id="id" formControlName="id">
+            <input type="number" class="form-control" id="id" formControlName="id"  [readonly]="editFlag">
             <div>
                 <b>Validation pending</b>
             </div>

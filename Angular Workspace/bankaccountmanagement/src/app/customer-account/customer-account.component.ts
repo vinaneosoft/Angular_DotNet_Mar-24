@@ -12,6 +12,7 @@ export class CustomerAccountComponent {
   
    bankAccount:BankAccount | undefined;
    bankAccounts=new Array<BankAccount>();
+   editFlag=false;
     showForm=false;
    heading="";
    array:string[]=[];
@@ -73,6 +74,7 @@ export class CustomerAccountComponent {
     this.pass!.setValue(this.bankAccount.password);
     this.confirmpass!.setValue(this.bankAccount.password);
     this.showForm=true;
+    this.editFlag=true;
   }
 
   get acctype(){
