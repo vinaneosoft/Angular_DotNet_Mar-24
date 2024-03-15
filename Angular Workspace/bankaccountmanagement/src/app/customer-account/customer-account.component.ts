@@ -97,6 +97,7 @@ export class CustomerAccountComponent {
   }
   resetForm(){
     this.editFlag=false; // flag gets reset
+    this.showForm=!this.showForm
     this.accountForm.reset();
     this.acctype!.setValue("savings");
   }

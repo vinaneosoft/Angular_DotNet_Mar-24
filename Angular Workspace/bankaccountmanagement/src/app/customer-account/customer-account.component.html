@@ -16,7 +16,7 @@
         </tbody>
     </table>
 </section> -->
-<button class="btn btn-success" (click)="showForm=!showForm; resetForm()" type="button">NEW ACCOUNT</button>
+<button class="btn btn-success" (click)="resetForm()" type="button">NEW ACCOUNT</button>
 <section class="bg-warning w-75" *ngIf="showForm">
     <h4>ACCOUNT INPUT FORM</h4>
     <form [formGroup]="accountForm" (submit)="setDetails()">
