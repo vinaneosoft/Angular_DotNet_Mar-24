@@ -95,10 +95,10 @@ export class CustomerAccountComponent {
     this.showForm=true;
     this.editFlag=true;
   }
-
   resetForm(){
     this.editFlag=false; // flag gets reset
-    this.accountForm.reset(this.acctype);
+    this.accountForm.reset();
+    this.acctype!.setValue("savings");
   }
   get acctype(){
     return this.accountForm.get('accountType');
