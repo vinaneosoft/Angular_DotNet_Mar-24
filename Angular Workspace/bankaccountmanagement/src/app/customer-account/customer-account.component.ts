@@ -9,6 +9,7 @@ import { AccountCRUDService } from '../myservices/account-crud.service';
   styleUrl: './customer-account.component.css'
 })
 export class CustomerAccountComponent {
+  
    bankAccounts=new Array<BankAccount>();
     showForm=false;
    heading="";
@@ -59,7 +60,9 @@ export class CustomerAccountComponent {
       error:err=>console.log(err)
      });
   }
-
+  showAccount(account:BankAccount){
+    console.log(account);
+  }
 
 
   get balance(){

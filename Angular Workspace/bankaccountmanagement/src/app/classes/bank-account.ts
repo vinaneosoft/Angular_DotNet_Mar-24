@@ -7,7 +7,8 @@ export class BankAccount {
         public customerId=0,
         public id=0,
         public accountDate=new Date()
-    ){}
+    ){
+    }
 
     // deposit
     // withdraw

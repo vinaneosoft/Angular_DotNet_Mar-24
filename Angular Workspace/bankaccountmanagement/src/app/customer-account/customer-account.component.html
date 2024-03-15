@@ -86,6 +86,7 @@
         </div>
        
         <input type="submit" class="btn btn-primary m-2" value="CREATE ACCOUNT" [disabled]="accountForm.invalid">
+       
         <input type="reset" class="btn btn-primary">
       </form>
 </section>
@@ -94,11 +95,12 @@
 <section>
     <h2>{{heading}}</h2> <!-- 4.-->
     <div class="row">
-        <div class="col-md-4 border border-2 border-dark" *ngFor="let account of bankAccounts | orderby :'customerName' ">
+        <div class="col-md-4 border border-2 border-dark bg-warning" *ngFor="let account of bankAccounts | orderby :'customerName' ">
             <app-account-card [customerAccount]="account"  (eventEmitter)="heading=$event" (eventEmitter2)="array=$event"> <!-- 3. -->
             </app-account-card>
             <div>
                 <button type="button" (click)="deleteAccount(account.id)">DELETE</button>
+                <button type="button" (click)="showAccount(account)">EDIT</button>
             </div>
         </div>
     </div>
