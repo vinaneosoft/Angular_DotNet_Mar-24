@@ -94,9 +94,12 @@
 <section>
     <h2>{{heading}}</h2> <!-- 4.-->
     <div class="row">
-        <div class="col-md-4" *ngFor="let account of bankAccounts | orderby :'customerName' ">
+        <div class="col-md-4 border border-2 border-dark" *ngFor="let account of bankAccounts | orderby :'customerName' ">
             <app-account-card [customerAccount]="account"  (eventEmitter)="heading=$event" (eventEmitter2)="array=$event"> <!-- 3. -->
             </app-account-card>
+            <div>
+                <button type="button" (click)="deleteAccount(account.id)">DELETE</button>
+            </div>
         </div>
     </div>
 </section>

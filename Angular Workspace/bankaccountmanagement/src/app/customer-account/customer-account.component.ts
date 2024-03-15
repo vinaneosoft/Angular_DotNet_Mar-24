@@ -55,7 +55,7 @@ export class CustomerAccountComponent {
   
   deleteAccount(accountNumber:number){
     this.accCrud.deleteAccountByAccNum(accountNumber).subscribe({
-      next:scc=>window.alert("Account deleted Successfully...."),
+      next:scc=>{window.alert("Account deleted Successfully....");this.getAccounts() },
       error:err=>console.log(err)
      });
   }
