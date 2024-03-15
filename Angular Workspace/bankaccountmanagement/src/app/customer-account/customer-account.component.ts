@@ -10,6 +10,7 @@ import { AccountCRUDService } from '../myservices/account-crud.service';
 })
 export class CustomerAccountComponent {
   
+   bankAccount:BankAccount | undefined;
    bankAccounts=new Array<BankAccount>();
     showForm=false;
    heading="";
@@ -60,11 +61,21 @@ export class CustomerAccountComponent {
       error:err=>console.log(err)
      });
   }
-  showAccount(account:BankAccount){
-    console.log(account);
+  getAccount(account:BankAccount){
+    this.bankAccount=account;
+    console.log(this.bankAccount);
+    
+    this.acctype!.setValue(this.bankAccount.accountType);
+    this.balance?.setValue(this.bankAccount.accountBalance);
+    this.accid?.setValue(this.bankAccount.id);
   }
 
-
+  get acctype(){
+    return this.accountForm.get('accountType');
+  }
+  get accid(){
+    return this.accountForm.get('id');
+  }
   get balance(){
     return this.accountForm.get('accountBalance');  //2
   }

@@ -99,8 +99,8 @@
             <app-account-card [customerAccount]="account"  (eventEmitter)="heading=$event" (eventEmitter2)="array=$event"> <!-- 3. -->
             </app-account-card>
             <div>
-                <button type="button" (click)="deleteAccount(account.id)">DELETE</button>
-                <button type="button" (click)="showAccount(account)">EDIT</button>
+                <button class="btn btn-danger m-2" type="button" (click)="deleteAccount(account.id)">DELETE</button>
+                <button class="btn btn-info" type="button" (click)="getAccount(account)">EDIT</button>
             </div>
         </div>
     </div>
