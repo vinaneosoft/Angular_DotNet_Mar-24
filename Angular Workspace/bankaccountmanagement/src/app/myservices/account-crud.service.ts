@@ -24,6 +24,7 @@ export class AccountCRUDService {
   }
 
   updateAccount(bankAccount:BankAccount){
-    return this.http.put(this.serveraddress+"/"+bankAccount.id,bankAccount);
+    console.log(typeof bankAccount.id);
+    return this.http.put(`${this.serveraddress}/${bankAccount.id}`,bankAccount);
   }
 }

@@ -79,19 +79,17 @@
         </div>  
         <div class="mb-3">
             <label for="id" class="form-label">Account Number</label>
-            <input type="number" class="form-control" id="id" formControlName="id"  [readonly]="editFlag">
+            <input type="string" class="form-control" id="id" formControlName="id"  [readonly]="editFlag">
             <div>
-                <b>Validation pending</b>
+                <b>required validation</b>
+                <b>pattern matching</b>
             </div>
         </div>
-       
         <input type="submit" class="btn btn-primary me-2" [value]="editFlag ? 'UPDATE ACCOUNT': 'CREATE ACCOUNT' " [disabled]="accountForm.invalid">
         <input type="reset" class="btn btn-primary me-2" >
         <button type="button" class="btn btn-info" (click)="resetForm()">CANCEL</button>
       </form>
 </section>
-
-
 <section>
     <h2>{{heading}}</h2> <!-- 4.-->
     <div class="row">

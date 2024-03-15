@@ -5,7 +5,7 @@ export class BankAccount {
         public password="ax123",
         public customerName="BBB",
         public customerId=0,
-        public id=0,
+        public id="0",
         public accountDate=new Date()
     ){
     }

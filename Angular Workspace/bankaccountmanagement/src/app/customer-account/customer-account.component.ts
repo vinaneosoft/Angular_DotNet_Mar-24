@@ -45,6 +45,8 @@ export class CustomerAccountComponent {
   }
   setDetails(){
     let formAccount:BankAccount=this.accountForm.value;
+    //console.log(typeof formAccount.id);
+    
     if(this.editFlag)
        this.updateAccount(formAccount)  //  object with updated values
     else
