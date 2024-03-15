@@ -53,7 +53,9 @@ export class CustomerAccountComponent {
   createAccount(formAccount:BankAccount){
     formAccount.accountDate=new Date(); // system date
       this.accCrud.addAccount(formAccount).subscribe({
-       next:scc=>this.getAccounts(),
+       next:scc=>{this.getAccounts();
+        this.resetForm();
+      },
        error:err=>console.log(err)
       });
   }
@@ -61,17 +63,19 @@ export class CustomerAccountComponent {
     formAccount.accountDate=this.bankAccount.accountDate;
     //console.log(formAccount);
     this.accCrud.updateAccount(formAccount).subscribe({
-       next:scc=>{window.alert("Account updated Successfully...");this.getAccounts()},
+       next:scc=>{
+        window.alert("Account updated Successfully...");
+        this.getAccounts();
+        this.resetForm();
+      },
        error:err=>console.log(err)
     });
-
   }
   deleteAccount(accountNumber:number){
     this.accCrud.deleteAccountByAccNum(accountNumber).subscribe({
       next:scc=>{
       window.alert("Account deleted Successfully....");
       this.getAccounts(); 
-      this.editFlag=false; 
     },
       error:err=>console.log(err)
      });
@@ -90,6 +94,10 @@ export class CustomerAccountComponent {
     this.editFlag=true;
   }
 
+  resetForm(){
+    this.editFlag=false; // flag gets reset
+    this.accountForm.reset();
+  }
   get acctype(){
     return this.accountForm.get('accountType');
   }
