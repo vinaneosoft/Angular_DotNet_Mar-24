@@ -42,20 +42,26 @@ export class CustomerAccountComponent {
     error:err=>console.log(err)
   })
   
-  
   }
   setDetails(){
-    //console.log(this.accountForm.value);
     let bankAccount:BankAccount=this.accountForm.value;
-    bankAccount.accountDate=new Date(); // system date
-   // console.log(bankAccount);
-    // addAccount (object)
-     this.accCrud.addAccount(bankAccount).subscribe({
-      next:scc=>this.getAccounts(),
-      error:err=>console.log(err)
-     });
+    if(this.editFlag)
+       this.updateAccount(bankAccount)  //  object with updated values
+    else
+       this.createAccount(bankAccount); //  object with new values
   }
-  
+  createAccount(bankAccount:BankAccount){
+    bankAccount.accountDate=new Date(); // system date
+      this.accCrud.addAccount(bankAccount).subscribe({
+       next:scc=>this.getAccounts(),
+       error:err=>console.log(err)
+      });
+  }
+  updateAccount(bankAccount:BankAccount){
+    console.log(bankAccount);
+  }
+
+
   deleteAccount(accountNumber:number){
     this.accCrud.deleteAccountByAccNum(accountNumber).subscribe({
       next:scc=>{window.alert("Account deleted Successfully....");this.getAccounts() },
