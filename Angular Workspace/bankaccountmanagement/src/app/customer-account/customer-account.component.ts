@@ -98,7 +98,7 @@ export class CustomerAccountComponent {
 
   resetForm(){
     this.editFlag=false; // flag gets reset
-    this.accountForm.reset();
+    this.accountForm.reset(this.acctype);
   }
   get acctype(){
     return this.accountForm.get('accountType');
