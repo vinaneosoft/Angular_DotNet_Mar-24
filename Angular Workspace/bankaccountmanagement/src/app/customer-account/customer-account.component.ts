@@ -66,16 +66,19 @@ export class CustomerAccountComponent {
     console.log(this.bankAccount);
     
     this.acctype!.setValue(this.bankAccount.accountType);
-    this.balance?.setValue(this.bankAccount.accountBalance);
-    this.accid?.setValue(this.bankAccount.id);
+    this.balance!.setValue(this.bankAccount.accountBalance);
+    this.custid!.setValue(this.bankAccount.customerId);
+    this.custname!.setValue(this.bankAccount.customerName);
+    this.accnum!.setValue(this.bankAccount.id);
+    this.pass!.setValue(this.bankAccount.password);
+    this.confirmpass!.setValue(this.bankAccount.password);
+    this.showForm=true;
   }
 
   get acctype(){
     return this.accountForm.get('accountType');
   }
-  get accid(){
-    return this.accountForm.get('id');
-  }
+ 
   get balance(){
     return this.accountForm.get('accountBalance');  //2
   }

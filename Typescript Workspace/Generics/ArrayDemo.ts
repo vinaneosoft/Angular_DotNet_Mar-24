@@ -2,12 +2,10 @@ let array=[7880000,"hi",4545645, true, 6767676];
 
 // duplicate allowed, indexed collection
 let salaryArray=new Array<number>();
-/** Array<number>.push(...items: number[]): number */
 salaryArray.push(78000,90000,67000,78000,34000,45000,90000);
 salaryArray.push(78000);
-salaryArray.push(78000,67000);
-salaryArray.push(77000);
-salaryArray.push();
+salaryArray.push("fifty thousand");
+
 
 console.log("Popped element:"+salaryArray.pop());
 console.log(salaryArray);
@@ -18,15 +16,16 @@ salaryArray.splice(3,1);  //index
 console.log(salaryArray);
 
 let departments=new Array<string>();
-/** Array<string>.push(...items: string[]): number */
-departments.push('LD','DN');
-console.log(departments.pop());
+departments.push('LD','DN', 'JS','UIUX');
+departments.push('DN', 'JS');
+departments.push(345);
 /**
- * push(...items : T[]):number{
+ *  push(...items : T[]):number{
+ *    // logic of pushing data in array
+ *  }
  * 
- * }
- * 
- * pop(): T | undefined {
- * }
+ *  pop(): T | undefined {
+ *   // login of popping data from array and returning
+ *  }
  * 
  */

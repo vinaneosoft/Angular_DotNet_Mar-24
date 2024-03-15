@@ -1,8 +1,7 @@
 // key-value collection
 // key : unique, value : duplicate allowed
 // non-indexed collection
-// empId :key,  DeptId : value
-// number, string
+// Assume empId :key,  DeptId : value
 let empMap = new Map();
 empMap.set(111, 'DN');
 empMap.set(121, 'JS');

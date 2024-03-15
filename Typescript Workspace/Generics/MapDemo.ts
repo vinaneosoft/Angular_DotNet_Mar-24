@@ -3,9 +3,7 @@
 // non-indexed collection
 
 
-// empId :key,  DeptId : value
-// number, string
-
+// Assume empId :key,  DeptId : value
 let empMap=new Map<number, string>();
 empMap.set(111,'DN')
 empMap.set(121,'JS')

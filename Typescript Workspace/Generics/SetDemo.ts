@@ -2,16 +2,25 @@
 
 let cities=new Set<string>();
 cities.add("mumbai")
-cities.add("Mumbai")
+cities.add("Solapur")
 cities.add("mumbai")
+cities.add(7989);
 cities.add("Thane")
 cities.add("Pune")
+
 console.log(cities);
 console.log(cities.has('Pune'));
 console.log(cities.delete('Pune'));
 console.log(cities.has('Pune'));
 console.log(cities.size);
 cities.forEach(ele=>console.log(ele))
+
+let empids=new Set<number>();
+empids.add(456);
+empids.add(116);
+empids.add(457);
+empids.add(356);
+empids.add(456); // duplcate override
 
 let itr1=cities.values();
 while(true){
@@ -48,3 +57,12 @@ for(let ele of cityArray){
 }
 console.log(citySet);
 
+/**
+ *  add(value:T){
+ *       // logic to add element in Set
+ *  }
+ * 
+ *  has(value: T): boolean{
+ *      // logic to check availability of value in set
+ *  }
+ */
