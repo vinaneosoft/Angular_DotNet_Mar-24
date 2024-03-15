@@ -10,7 +10,7 @@ import { AccountCRUDService } from '../myservices/account-crud.service';
 })
 export class CustomerAccountComponent {
   
-   bankAccount:BankAccount=new BankAccount();
+   bankAccount:BankAccount = new BankAccount();
    bankAccounts=new Array<BankAccount>();
    editFlag=false;
     showForm=false;
@@ -52,14 +52,19 @@ export class CustomerAccountComponent {
   }
   createAccount(formAccount:BankAccount){
     formAccount.accountDate=new Date(); // system date
-      this.accCrud.addAccount(this.bankAccount).subscribe({
+      this.accCrud.addAccount(formAccount).subscribe({
        next:scc=>this.getAccounts(),
        error:err=>console.log(err)
       });
   }
   updateAccount(formAccount:BankAccount){
     formAccount.accountDate=this.bankAccount.accountDate;
-    console.log(formAccount);
+    //console.log(formAccount);
+    this.accCrud.updateAccount(formAccount).subscribe({
+       next:scc=>{window.alert("Account updated Successfully...");this.getAccounts()},
+       error:err=>console.log(err)
+    });
+
   }
   deleteAccount(accountNumber:number){
     this.accCrud.deleteAccountByAccNum(accountNumber).subscribe({
@@ -69,8 +74,7 @@ export class CustomerAccountComponent {
   }
   getAccount(account:BankAccount){
     this.bankAccount=account;
-    console.log(this.bankAccount);  // date available
-    
+   // console.log(this.bankAccount);  // date available
     this.acctype!.setValue(this.bankAccount.accountType);
     this.balance!.setValue(this.bankAccount.accountBalance);
     this.custid!.setValue(this.bankAccount.customerId);

@@ -22,4 +22,8 @@ export class AccountCRUDService {
     //id is attached in url
     return this.http.delete(this.serveraddress+"/"+accountNumber);
   }
+
+  updateAccount(bankAccount:BankAccount){
+    return this.http.put(this.serveraddress+"/"+bankAccount.id,bankAccount);
+  }
 }
