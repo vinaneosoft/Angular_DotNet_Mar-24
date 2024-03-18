@@ -23,6 +23,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {provideNativeDateAdapter} from '@angular/material/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,10 +43,10 @@ import {MatIconModule} from '@angular/material/icon';
     CustomerComponent
   ],
   imports: [
-    BrowserModule,MatSlideToggleModule,MatButtonModule,MatIconModule,
+    BrowserModule,MatSlideToggleModule,MatButtonModule,MatIconModule,MatDatepickerModule,
     AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule
   ],
-  providers: [MathsService, provideAnimationsAsync()], /**The set of injectable objects that are available in the injector of this module */
+  providers: [MathsService, provideAnimationsAsync(), provideNativeDateAdapter()], /**The set of injectable objects that are available in the injector of this module */
   bootstrap: [AppComponent]
 })
 export class AppModule { }
