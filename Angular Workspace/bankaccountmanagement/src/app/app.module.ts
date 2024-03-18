@@ -22,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button';
-
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +41,7 @@ import {MatButtonModule} from '@angular/material/button';
     CustomerComponent
   ],
   imports: [
-    BrowserModule,MatSlideToggleModule,MatButtonModule,
+    BrowserModule,MatSlideToggleModule,MatButtonModule,MatIconModule,
     AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule
   ],
   providers: [MathsService, provideAnimationsAsync()], /**The set of injectable objects that are available in the injector of this module */
