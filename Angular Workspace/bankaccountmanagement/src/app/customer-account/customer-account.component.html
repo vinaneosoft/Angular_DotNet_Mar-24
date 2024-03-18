@@ -94,16 +94,21 @@
 <section>
     <h2>{{heading}}</h2> <!-- 4.-->
     <div class="row">
-        <div class="col-md-4 border border-2 border-dark bg-warning" *ngFor="let account of bankAccounts | orderby :'customerName' ">
+        <div class="col-md-4 border border-2 border-dark bg-warning p-2" *ngFor="let account of bankAccounts | orderby :'customerName' ">
             <app-account-card [customerAccount]="account"  (eventEmitter)="heading=$event" (eventEmitter2)="array=$event"> <!-- 3. -->
             </app-account-card>
-            <div>
-                <button mat-mini-fab color="warn" type="button" (click)="deleteAccount(account.id)">
-                    <mat-icon>delete</mat-icon>
-                </button>
-                <button class="btn btn-info" type="button" (click)="getAccount(account)">
-                    EDIT
-                </button>
+            <div class="d-flex justify-content-between">
+                <div>
+                    <button mat-mini-fab  type="button" (click)="getAccount(account)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                   
+                </div>
+                <div>
+                    <button mat-mini-fab color="warn" type="button" (click)="deleteAccount(account.id)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
