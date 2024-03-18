@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { UserService } from './user.service';
 
 
 
@@ -6,10 +7,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthenticationGuardService {
-  constructor() { }
+  constructor(private userService:UserService) { }
+
   canActivate(): boolean {
-   console.log("Guard activated");
-   
-    return false;
+    if(this.userService.loginFlag)
+      return true
+   else
+      {
+        window.alert("Please login first...");
+        // navigate to login component
+        return false;
+      }
   }
 }
