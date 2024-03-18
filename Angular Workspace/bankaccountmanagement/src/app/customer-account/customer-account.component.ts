@@ -9,7 +9,7 @@ import { AccountCRUDService } from '../myservices/account-crud.service';
   styleUrl: './customer-account.component.css'
 })
 export class CustomerAccountComponent {
-  
+    toolTipMessage="";
    bankAccount:BankAccount = new BankAccount();
    bankAccounts=new Array<BankAccount>();
    editFlag=false;
@@ -161,14 +161,3 @@ export class CustomerAccountComponent {
  */
 
 
-
-class Train{
-
-}
-class LocalTrain extends Train{
-
-}
-
-
-let localTrain=new LocalTrain();
-let train:Train=localTrain;
