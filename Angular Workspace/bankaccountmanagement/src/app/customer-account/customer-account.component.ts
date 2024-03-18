@@ -159,3 +159,16 @@ export class CustomerAccountComponent {
  * else
  * return null
  */
+
+
+
+class Train{
+
+}
+class LocalTrain extends Train{
+
+}
+
+
+let localTrain=new LocalTrain();
+let train:Train=localTrain;
