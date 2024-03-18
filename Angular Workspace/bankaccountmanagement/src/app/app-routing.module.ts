@@ -19,7 +19,7 @@ const routes: Routes = [
       { path:'salaryacc', component:SalaryAccountComponent },
     ]
  },
- { path:"bankaccounts" , component:CustomerAccountComponent, canActivate:mapToCanActivate([AuthenticationGuardService])},
+ { path:"bankaccounts" , component:CustomerAccountComponent, /* canActivate:mapToCanActivate([AuthenticationGuardService]) */},
  { path:"login" , component:LoginComponent},
  { path:"customer", component:CustomerComponent},
  { path:"customer/:custId", component:CustomerComponent},

@@ -18,13 +18,12 @@ export class UserService {
   adminLoginCheck(username:string, password:string):boolean{
     if(username==this.username && password== this.password){
       this.loginFlag=true
-      this.cookie.set("bankadmin",username)
+      this.cookie.set("bankadmin",username, new Date('Nov 3, 2024'))
      }
      else
        this.loginFlag=false;
      return this.loginFlag;
   }
-
   customerLoginCheck(){
     // get data from json
     // convert into array

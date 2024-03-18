@@ -19,6 +19,9 @@ import { SalaryAccountComponent } from './salary-account/salary-account.componen
 import { CustomerComponent } from './customer/customer.component';
 import { MathsService } from './myservices/maths.service';
 import { HttpClientModule } from '@angular/common/http';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -38,10 +41,10 @@ import { HttpClientModule } from '@angular/common/http';
     CustomerComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,MatSlideToggleModule,MatButtonModule,
     AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule
   ],
-  providers: [MathsService], /**The set of injectable objects that are available in the injector of this module */
+  providers: [MathsService, provideAnimationsAsync()], /**The set of injectable objects that are available in the injector of this module */
   bootstrap: [AppComponent]
 })
 export class AppModule { }
