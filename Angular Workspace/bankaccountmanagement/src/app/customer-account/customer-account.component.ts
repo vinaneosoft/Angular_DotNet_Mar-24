@@ -75,7 +75,7 @@ export class CustomerAccountComponent {
        error:err=>console.log(err)
     });
   }
-  deleteAccount(accountNumber:number){
+  deleteAccount(accountNumber:string){
     this.accCrud.deleteAccountByAccNum(accountNumber).subscribe({
       next:scc=>{
       window.alert("Account deleted Successfully....");
@@ -96,6 +96,12 @@ export class CustomerAccountComponent {
     this.confirmpass!.setValue(this.bankAccount.password);
     this.showForm=true;
     this.editFlag=true;
+  }
+  search(){
+    // call crudService method
+    // subscribe
+    // next : data=>this.bankAccounts=data as BankAccount[] , error
+    
   }
   resetForm(){
     this.editFlag=false; // flag gets reset
