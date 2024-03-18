@@ -13,6 +13,7 @@ export class LoginComponent {
   constructor(private userService:UserService, private router:Router){}  //1.
   login(loginForm:any){
     this.loginError="";
+    // pass type also
   this.flag=this.userService.loginCheck(loginForm.value.username,loginForm.value.password);
   if(this.flag)
     {
