@@ -13,14 +13,19 @@ export class UserService {
   loginCheck(username:string, password:string):boolean{
     // if type is admin : adminLoginCheck
     //else customerLoginCheck
-    if(username==this.username && password== this.password){
-     this.loginFlag=true
-     this.cookie.set("bankadmin",username)
-    }
-    else
-      this.loginFlag=false;
-    return this.loginFlag;
+    return this.adminLoginCheck(username,password);
   }
+
+  adminLoginCheck(username:string, password:string):boolean{
+    if(username==this.username && password== this.password){
+      this.loginFlag=true
+      this.cookie.set("bankadmin",username)
+     }
+     else
+       this.loginFlag=false;
+     return this.loginFlag;
+  }
+
 
   logOut(){
     this.loginFlag=false;
