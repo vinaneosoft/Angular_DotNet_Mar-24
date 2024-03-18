@@ -87,14 +87,9 @@
             </div>
         </div>
         <div class="mb-3">
-            <label for="accountDate">Choose a date (MM/DD/YYYY)</label>
-            <input id="accountDate" matInput [matDatepicker]="picker">
-            <mat-datepicker-toggle matIconSuffix [for]="picker">
-              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
-            </mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-        </div>
-        
+            <label for="accountDate">Choose a date (DD-MM-YYYY hh:mm (AM/PM) )</label>
+            <input  id="accountDate" matInput type="datetime-local">
+        </div>   
         <input type="submit" class="btn btn-primary me-2" [value]="editFlag ? 'UPDATE ACCOUNT': 'CREATE ACCOUNT' " [disabled]="accountForm.invalid">
         <input type="reset" class="btn btn-primary me-2" >
         <button type="button" class="btn btn-info" (click)="resetForm()">CANCEL</button>

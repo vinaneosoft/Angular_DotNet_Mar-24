@@ -25,6 +25,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {provideNativeDateAdapter} from '@angular/material/core';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,7 @@ import {provideNativeDateAdapter} from '@angular/material/core';
   ],
   imports: [
     BrowserModule,MatSlideToggleModule,MatButtonModule,MatIconModule,MatDatepickerModule,
-    AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule
+    AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule, MatInputModule
   ],
   providers: [MathsService, provideAnimationsAsync(), provideNativeDateAdapter()], /**The set of injectable objects that are available in the injector of this module */
   bootstrap: [AppComponent]
