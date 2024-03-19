@@ -6,7 +6,13 @@ export interface AppState {
 }
 
 export const initialState: AppState = {
-  tasks: []
+  tasks: [
+    {
+      id:1,
+      title:"ABC",
+      description:"PQR"
+    }
+  ]
 };
 
 export function taskReducer(state = initialState, action:any): AppState {
@@ -21,7 +27,6 @@ export function taskReducer(state = initialState, action:any): AppState {
     case deleteTask.type:
         state.tasks=state.tasks.filter(task=>task.id!==action.task.id)
         return state;
-        break;
     default:
       return state;
   }
