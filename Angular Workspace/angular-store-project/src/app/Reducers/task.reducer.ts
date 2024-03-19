@@ -19,6 +19,8 @@ export function taskReducer(state = initialState, action:any): AppState {
         state.tasks=state.tasks.map(task => (task.id === action.task.id ? action.task : task))
         return state;
     case deleteTask.type:
+        state.tasks=state.tasks.filter(task=>task.id!==action.task.id)
+        return state;
         break;
     default:
       return state;
