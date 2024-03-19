@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TaskComponent } from './task/task.component';
 import { StoreModule } from '@ngrx/store';
 import { taskReducer } from './Reducers/task.reducer';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,9 +14,9 @@ import { taskReducer } from './Reducers/task.reducer';
     TaskComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,FormsModule,
     AppRoutingModule, StoreModule.forRoot({tasks:taskReducer})
-    /** register same name of store array here */
+    /** register same name of store array */
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,16 +4,15 @@ import { addTask, updateTask, deleteTask } from '../Actions/task.actions';
 export interface AppState {
   tasks: Task[];
 }
-
-export const initialState: AppState = {
+ export const initialState: AppState = {
   tasks: [
     {
       id:1,
-      title:"ABC",
-      description:"PQR"
+      title:"JS training",
+      description:'training to be completed in 2 days'
     }
   ]
-};
+}; 
 
 export function taskReducer(state = initialState, action:any): AppState {
   switch (action.type) { // type and payload is built in key, 
