@@ -20,12 +20,14 @@ export class TaskComponent {
     })
   }
   addNewTask(taskForm:any){
-    
     const newTask: Task = {
       id:this.idCounter++,
       title:taskForm.value.title,
       description: taskForm.value.description
     };
     this.store.dispatch(addTask({ task: newTask }));
+  }
+  delTask(id:number){
+    this.store.dispatch(deleteTask({ id }));
   }
 }

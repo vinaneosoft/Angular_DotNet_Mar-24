@@ -28,6 +28,7 @@
                     <td>{{tsk.id}}</td>
                     <td>{{tsk.title}}</td>
                     <td>{{tsk.description}}</td>
+                    <td><button (click)="delTask(tsk.id)">DELETE</button></td>
                 </tr>
             </tbody>
         </table>
