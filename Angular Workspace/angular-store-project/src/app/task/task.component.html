@@ -6,7 +6,7 @@
 </table> -->
 <section>
     <h3>TASK INPUT FORM</h3>
-    <form (submit)="addTask(taskForm)" #taskForm="ngForm">
+    <form (submit)="addNewTask(taskForm)" #taskForm="ngForm">
         <input type="text" placeholder="add task title" name="title" ngModel>
         <input type="text" placeholder="add description" name="description" ngModel>
         <input type="submit" value="ADD TASK">
