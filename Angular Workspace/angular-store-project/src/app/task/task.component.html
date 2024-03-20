@@ -5,6 +5,18 @@
 </tr>
 </table> -->
 <section>
+    <form (submit)="addTask(taskForm)" #taskForm="ngForm">
+        <input type="text" placeholder="add task title" name="title" ngModel>
+        <input type="text" placeholder="add description" name="description" ngModel>
+        <input type="submit" value="ADD TASK">
+        <input type="reset" value="RESET">
+    </form> 
+</section>
+
+
+
+
+<section>
     <div *ngFor="let task of tasks | keyvalue">
         <p>{{task.key}}</p>
         <table border="2">

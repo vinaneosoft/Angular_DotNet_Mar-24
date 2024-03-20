@@ -18,8 +18,7 @@ export class TaskComponent {
       }
     })
   }
-test(data:Task[]){
-  console.log(data);
-  
-}
+  addTask(taskForm:any){
+
+  }
 }
