@@ -12,10 +12,6 @@ export class TaskComponent {
   tasks:Task[]=[]
   mytasks:Task[]=[];
   constructor(private store: Store<AppState>){
-    this.getTasks();
-  }
-
-  getTasks(){
     this.store.select("tasks").subscribe({
       next:tasks=>{this.tasks=tasks;
       console.log(this.tasks);
@@ -29,6 +25,5 @@ export class TaskComponent {
       description: taskForm.value.description
     };
     this.store.dispatch(addTask({ task: newTask }));
-    console.log("task added");
   }
 }
