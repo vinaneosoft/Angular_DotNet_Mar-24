@@ -9,6 +9,7 @@ import { addTask,updateTask,deleteTask } from '../Actions/task.actions';
   styleUrl: './task.component.css'
 })
 export class TaskComponent {
+  idCounter=1;
   tasks:Task[]=[]
   mytasks:Task[]=[];
   constructor(private store: Store<AppState>){
@@ -19,8 +20,9 @@ export class TaskComponent {
     })
   }
   addNewTask(taskForm:any){
+    
     const newTask: Task = {
-      id: 111,
+      id:this.idCounter++,
       title:taskForm.value.title,
       description: taskForm.value.description
     };
