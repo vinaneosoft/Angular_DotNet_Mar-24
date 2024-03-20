@@ -23,12 +23,12 @@ export class TaskComponent {
     })
   }
   addNewTask(taskForm:any){
-    console.log(taskForm);
     const newTask: Task = {
       id: 111,
       title:taskForm.value.title,
       description: taskForm.value.description
     };
     this.store.dispatch(addTask({ task: newTask }));
+    console.log("task added");
   }
 }

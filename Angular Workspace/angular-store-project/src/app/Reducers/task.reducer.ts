@@ -17,9 +17,8 @@ export interface AppState {
 export function taskReducer(state = initialState, action:any): AppState {
   switch (action.type) { // type and payload is built in key, 
     case addTask.type:
-        state.tasks.push(action.task)  //[...state.tasks, action.task] 
-        // array updated
-        return state;
+      return { ...state, tasks
+        : [...state.tasks, action.task] };
     case updateTask.type:
         state.tasks=state.tasks.map(task => (task.id === action.task.id ? action.task : task))
         return state;
