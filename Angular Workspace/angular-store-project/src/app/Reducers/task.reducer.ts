@@ -15,8 +15,10 @@ export function taskReducer(state = initialState, action:any): AppState {
       return { ...state, tasks
         : [...state.tasks, action.task] };
     case updateTask.type:
-        state.tasks=state.tasks.map(task => (task.id === action.task.id ? action.task : task))
-        return state;
+      return {
+        ...state,
+        tasks: state.tasks.map(task => (task.id === action.task.id ? action.task : task))
+      };
     case deleteTask.type:
       return { ...state, tasks: state.tasks.filter(task => task.id !== action.id) };
     default:

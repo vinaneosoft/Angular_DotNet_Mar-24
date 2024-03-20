@@ -14,13 +14,23 @@
     </form> 
 </section>
 <section>
+    <h3>TASK UPDATE FORM</h3>
+    <form (submit)="updateTask(taskForm2)" #taskForm2="ngForm">
+        <input type="number" placeholder="add existing task id" name="id" ngModel>
+        <input type="text" placeholder="add task title" name="title" ngModel>
+        <input type="text" placeholder="add description" name="description" ngModel>
+        <input type="submit" value="UPDATE TASK">
+        <input type="reset" value="RESET">
+    </form> 
+</section>
+<section>
     <h3>TASK DETAILS</h3>
     <div *ngFor="let task of tasks | keyvalue">
         <p>{{task.key}}</p>
         <table border="2">
             <thead>
                 <tr>
-                    <th>ID</th><th>TITLE</th><th>DESCRIPTION</th>
+                    <th>ID</th><th>TITLE</th><th>DESCRIPTION</th><th>ACTION</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,7 +38,7 @@
                     <td>{{tsk.id}}</td>
                     <td>{{tsk.title}}</td>
                     <td>{{tsk.description}}</td>
-                    <td><button (click)="delTask(tsk.id)">DELETE</button></td>
+                    <td><button type="button" (click)="delTask(tsk.id)">DELETE</button></td>
                 </tr>
             </tbody>
         </table>

@@ -27,6 +27,14 @@ export class TaskComponent {
     };
     this.store.dispatch(addTask({ task: newTask }));
   }
+  updateTask(taskForm2:any){
+    const updatedTask: Task = {
+      id:taskForm2.value.id,
+      title:taskForm2.value.title,
+      description: taskForm2.value.description
+    };
+    this.store.dispatch(updateTask({ task: updatedTask }));
+  }
   delTask(id:number){
     this.store.dispatch(deleteTask({ id }));
   }
